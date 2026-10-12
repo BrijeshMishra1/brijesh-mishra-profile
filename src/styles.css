@@ -251,15 +251,28 @@ ol {
 .hero__portrait {
   position: relative;
   margin: 0;
-  align-self: end;
+  align-self: center;
+  padding-bottom: 24px;
   display: flex;
   justify-content: center;
 }
 
-.hero__portrait img {
+/* Circular portrait: the cut-out sits on a soft disc inside an amber ring. */
+.hero__photo {
   position: relative;
+  width: min(236px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06));
+  box-shadow: 0 0 0 3px var(--amber), 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+.hero__photo img {
+  position: absolute;
+  left: -12%;
+  top: 6%;
   display: block;
-  width: min(100%, 280px);
+  width: 124%;
   height: auto;
 }
 
@@ -987,8 +1000,12 @@ main {
   }
   .hero__portrait {
     order: -1;
-    max-width: 200px;
     margin: 0 auto;
+    padding-bottom: 8px;
+  }
+  /* Explicit size: a percentage width would collapse inside a shrink-wrapped grid item. */
+  .hero__photo {
+    width: 176px;
   }
   /* Keep the board inside the portrait box so it never runs under the text. */
   .hero__portrait {
@@ -1092,8 +1109,9 @@ main {
   .hero__grid {
     padding-top: 0;
   }
-  .hero__portrait img {
+  .hero__photo {
     width: 120px;
+    box-shadow: 0 0 0 2px #444;
   }
   .readout,
   .readout__note {

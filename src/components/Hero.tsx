@@ -44,10 +44,12 @@ export function Hero({ onToggleTheme }: Props) {
           </div>
           <figure className="hero__portrait">
             <HeroBackdrop />
-            <picture>
-              <source srcSet={identity.photoCutout} type="image/webp" />
-              <img src={identity.photo} alt="Portrait of Dr. Brijesh Mishra" width={640} height={627} />
-            </picture>
+            <div className="hero__photo">
+              <picture>
+                <source srcSet={identity.photoCutout} type="image/webp" />
+                <img src={identity.photo} alt="Portrait of Dr. Brijesh Mishra" width={640} height={627} />
+              </picture>
+            </div>
           </figure>
         </div>
         <button type="button" className="hero__theme" onClick={onToggleTheme} aria-label="Switch colour theme">
