@@ -45,7 +45,7 @@ export const identity = {
   org: "School of Engineering and Technology, CMR University, Bengaluru",
   credentials: ["IEEE Senior Member", "IETE Fellow"],
   photo: "brijesh.jpg",
-  /** Same portrait with the backdrop removed, so the radiation pattern can sit behind the figure. */
+  /** Same portrait with the backdrop removed, so it blends into any hero colour. */
   photoCutout: "brijesh.webp",
   summary:
     "Designs antennas and RF devices that make 5G, mmWave and terahertz links practical: compact MIMO arrays, reconfigurable and energy-harvesting antennas, and machine-learning and RIS-assisted designs.",

@@ -1,6 +1,6 @@
 /* ---------- Tokens ----------
    Teal is sampled from the portrait's own backdrop (#1c676a) so the photo
-   blends into the hero. Amber is the signal colour: radiation lobe, bands, links. */
+   blends into the hero. Amber is the signal colour: spectrum bands, links, active tab. */
 :root {
   --teal: #1c676a;
   --teal-deep: #0e3d40;
@@ -261,35 +261,6 @@ ol {
   display: block;
   width: min(100%, 280px);
   height: auto;
-}
-
-.radiation {
-  position: absolute;
-  left: -18%;
-  top: -12%;
-  width: 136%;
-  height: auto;
-  opacity: 0.8;
-  pointer-events: none;
-}
-.radiation__ring {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.16);
-  stroke-width: 0.25;
-}
-.radiation__lobe {
-  fill: rgba(240, 184, 74, 0.1);
-  stroke: var(--amber);
-  stroke-width: 0.6;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: draw 2.4s 0.2s ease-out forwards;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 /* ---------- Buttons ---------- */
@@ -975,10 +946,6 @@ main {
   html {
     scroll-behavior: auto;
   }
-  .radiation__lobe {
-    animation: none;
-    stroke-dashoffset: 0;
-  }
 }
 
 /* ---------- Print: a resume, not a website ---------- */
@@ -1000,7 +967,6 @@ main {
   .hero__theme,
   .skip,
   .spectrum,
-  .radiation,
   .hero__actions,
   .readout__note,
   .pubs__tools,

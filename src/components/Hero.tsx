@@ -1,7 +1,6 @@
 import { identity, links, scholar } from "../data/profile";
 import { legacy } from "../data/legacy";
 import { countByType } from "../lib/publications";
-import { Radiation } from "./Radiation";
 
 interface Props {
   onToggleTheme: () => void;
@@ -43,7 +42,6 @@ export function Hero({ onToggleTheme }: Props) {
             </div>
           </div>
           <figure className="hero__portrait">
-            <Radiation />
             <picture>
               <source srcSet={identity.photoCutout} type="image/webp" />
               <img src={identity.photo} alt="Portrait of Dr. Brijesh Mishra" width={640} height={627} />

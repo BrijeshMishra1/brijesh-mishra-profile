@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { legacy, parseLegacy } from "../data/legacy";
 import { countByType, filterPublications, groupByYear, safeLink, splitAuthors, yearsOf } from "./publications";
-import { patternPath, xFor } from "./spectrum";
+import { xFor } from "./spectrum";
 
 describe("legacy data", () => {
   it("matches the counts on the publication list", () => {
@@ -61,6 +61,5 @@ describe("helpers", () => {
     expect(xFor(0.5, 1000)).toBe(0);
     expect(xFor(10000, 1000)).toBe(1000);
     expect(xFor(100, 1000)).toBeGreaterThan(xFor(10, 1000));
-    expect(patternPath()).toMatch(/^M.*Z$/);
   });
 });
