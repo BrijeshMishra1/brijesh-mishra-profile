@@ -136,8 +136,6 @@ ol {
 }
 
 .tabs__bar {
-  max-width: var(--measure);
-  margin: 0 auto;
   padding: 0 var(--gutter);
   display: flex;
   gap: 4px;
@@ -172,7 +170,7 @@ ol {
 .hero__theme {
   position: absolute;
   top: 12px;
-  right: max(12px, calc((100% - var(--measure)) / 2 + var(--gutter)));
+  right: var(--gutter);
   z-index: 2;
   width: 44px;
   height: 44px;
@@ -211,8 +209,9 @@ ol {
 
 .hero__grid {
   position: relative;
-  max-width: var(--measure);
-  margin: 0 auto;
+  /* Full-bleed: the hero starts at the page gutter, not at the content column. */
+  max-width: none;
+  margin: 0;
   padding: clamp(20px, 3vw, 32px) var(--gutter) 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
@@ -381,7 +380,7 @@ ol {
   background: var(--teal-deep);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding: 0 max(var(--gutter), calc((100% - var(--measure)) / 2 + var(--gutter)));
+  padding: 0 var(--gutter);
 }
 
 .readout div {
@@ -412,7 +411,7 @@ ol {
   background: var(--teal-deep);
   color: #86aaa8;
   font-size: 0.78rem;
-  padding: 0 max(var(--gutter), calc((100% - var(--measure)) / 2 + var(--gutter))) 14px;
+  padding: 0 var(--gutter) 14px;
 }
 
 /* ---------- Spectrum ruler ---------- */
