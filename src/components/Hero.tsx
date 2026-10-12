@@ -1,4 +1,5 @@
 import { identity, links, scholar } from "../data/profile";
+import { HeroBackdrop } from "./HeroBackdrop";
 import { legacy } from "../data/legacy";
 import { countByType } from "../lib/publications";
 
@@ -42,6 +43,7 @@ export function Hero({ onToggleTheme }: Props) {
             </div>
           </div>
           <figure className="hero__portrait">
+            <HeroBackdrop />
             <picture>
               <source srcSet={identity.photoCutout} type="image/webp" />
               <img src={identity.photo} alt="Portrait of Dr. Brijesh Mishra" width={640} height={627} />

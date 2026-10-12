@@ -263,6 +263,36 @@ ol {
   height: auto;
 }
 
+.backdrop {
+  position: absolute;
+  left: -22%;
+  top: -24%;
+  width: 144%;
+  height: auto;
+  pointer-events: none;
+}
+.backdrop__disc {
+  fill: rgba(255, 255, 255, 0.06);
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-width: 0.35;
+}
+.backdrop__ring {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 0.35;
+}
+.backdrop__ring--accent {
+  stroke: var(--amber);
+  stroke-width: 0.6;
+}
+.backdrop__line {
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 0.35;
+}
+.backdrop__dot {
+  fill: rgba(255, 255, 255, 0.28);
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
@@ -965,6 +995,7 @@ main {
   }
   .tabs,
   .hero__theme,
+  .backdrop,
   .skip,
   .spectrum,
   .hero__actions,
