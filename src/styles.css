@@ -233,7 +233,7 @@ ol {
 }
 .hero__logo img {
   display: block;
-  width: clamp(128px, 12.5vw, 168px);
+  width: clamp(156px, 15vw, 232px);
   height: auto;
 }
 
