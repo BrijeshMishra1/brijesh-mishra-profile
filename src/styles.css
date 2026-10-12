@@ -257,14 +257,14 @@ ol {
   justify-content: center;
 }
 
-/* Circular portrait: the cut-out sits on a soft disc inside an amber ring. */
+/* Circular portrait: the cut-out sits on a solid teal disc inside an amber ring. */
 .hero__photo {
   position: relative;
   width: min(236px, 100%);
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06));
+  background: radial-gradient(circle at 50% 28%, #46b0b3 0%, #1f7378 45%, #0c3b3f 100%);
   box-shadow: 0 0 0 3px var(--amber), 0 14px 32px rgba(0, 0, 0, 0.28);
 }
 .hero__photo img {
