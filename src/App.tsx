@@ -5,7 +5,7 @@ import { ActiveTab, Section } from "./components/Section";
 import { Spectrum } from "./components/Spectrum";
 import { legacy } from "./data/legacy";
 import {
-  bio, bands, conferences, editorial, education, experience, identity, links, projects, scholars, type SectionId,
+  bio, conferences, editorial, education, experience, identity, links, projects, scholars, type SectionId,
 } from "./data/profile";
 import { safeLink } from "./lib/publications";
 
@@ -144,7 +144,7 @@ export function App() {
 
         <Section id="research" title="Research" kicker="What the work is about">
           <Spectrum onPick={pickBand} />
-          <div className="split">
+          <div className="stack">
             <div>
               <h3 className="h3">Interests</h3>
               <ul className="chips chips--static">
@@ -152,17 +152,9 @@ export function App() {
               </ul>
             </div>
             <div>
-              <h3 className="h3">Frequency bands in the papers</h3>
-              <ul className="plain">
-                {bands.map((b) => (
-                  <li key={b.id}>
-                    <button type="button" className="linkish" onClick={() => pickBand(b.query)}>{b.label}</button>
-                  </li>
-                ))}
-              </ul>
               <h3 className="h3">Courses taught</h3>
-              <ul className="plain">
-                {legacy.subjects.map((s) => <li key={s}>{s}</li>)}
+              <ul className="chips chips--static">
+                {legacy.subjects.map((s) => <li key={s} className="chip chip--plain">{s}</li>)}
               </ul>
             </div>
           </div>

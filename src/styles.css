@@ -570,6 +570,10 @@ main {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(24px, 5vw, 64px);
 }
+.stack {
+  display: grid;
+  gap: clamp(8px, 2vw, 20px);
+}
 .split--3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
