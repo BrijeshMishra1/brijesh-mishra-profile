@@ -24,6 +24,9 @@
   --radius: 10px;
   --gutter: clamp(16px, 4vw, 40px);
   --measure: 1280px;
+  /* Hero edges: a minimal margin on the left, the usual page margin on the right. */
+  --edge-left: clamp(10px, 1.4vw, 20px);
+  --edge-right: max(var(--gutter), calc((100% - var(--measure)) / 2 + var(--gutter)));
   color-scheme: light;
 }
 
@@ -136,7 +139,7 @@ ol {
 }
 
 .tabs__bar {
-  padding: 0 var(--gutter);
+  padding: 0 var(--edge-right) 0 var(--edge-left);
   display: flex;
   gap: 4px;
   overflow-x: auto;
@@ -170,7 +173,7 @@ ol {
 .hero__theme {
   position: absolute;
   top: 12px;
-  right: var(--gutter);
+  right: var(--edge-right);
   z-index: 2;
   width: 44px;
   height: 44px;
@@ -201,7 +204,7 @@ ol {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: clamp(16px, 2.4vw, 32px);
-  align-items: center;
+  align-items: start; /* logo sits at the top, level with the credentials line */
 }
 .hero__text {
   min-width: 0;
@@ -212,7 +215,7 @@ ol {
   /* Full-bleed: the hero starts at the page gutter, not at the content column. */
   max-width: none;
   margin: 0;
-  padding: clamp(20px, 3vw, 32px) var(--gutter) 0;
+  padding: clamp(20px, 3vw, 32px) var(--edge-right) 0 var(--edge-left);
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: clamp(16px, 4vw, 56px);
@@ -380,7 +383,7 @@ ol {
   background: var(--teal-deep);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding: 0 var(--gutter);
+  padding: 0 var(--edge-right) 0 var(--edge-left);
 }
 
 .readout div {
@@ -411,7 +414,7 @@ ol {
   background: var(--teal-deep);
   color: #86aaa8;
   font-size: 0.78rem;
-  padding: 0 var(--gutter) 14px;
+  padding: 0 var(--edge-right) 14px var(--edge-left);
 }
 
 /* ---------- Spectrum ruler ---------- */
@@ -1030,6 +1033,9 @@ main {
 
 /* ---------- Small screens ---------- */
 @media (max-width: 900px) {
+  :root {
+    --edge-left: var(--gutter);
+  }
   .hero__grid {
     grid-template-columns: 1fr;
   }
