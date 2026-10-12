@@ -265,29 +265,36 @@ ol {
 
 .backdrop {
   position: absolute;
-  left: -22%;
-  top: -24%;
-  width: 144%;
+  left: -54%;
+  top: -4%;
+  width: 124%;
   height: auto;
   pointer-events: none;
 }
-.backdrop__disc {
-  fill: rgba(255, 255, 255, 0.06);
-  stroke: rgba(255, 255, 255, 0.16);
+.backdrop__board {
+  fill: rgba(255, 255, 255, 0.05);
+  stroke: rgba(255, 255, 255, 0.22);
   stroke-width: 0.35;
 }
-.backdrop__ring {
+.backdrop__patch {
+  fill: rgba(255, 255, 255, 0.1);
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 0.35;
+}
+.backdrop__feed {
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 1.4;
+}
+.backdrop__port {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.22);
-  stroke-width: 0.35;
-}
-.backdrop__ring--accent {
   stroke: var(--amber);
-  stroke-width: 0.6;
+  stroke-width: 0.5;
 }
-.backdrop__line {
-  stroke: rgba(255, 255, 255, 0.22);
-  stroke-width: 0.35;
+.backdrop__wave {
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 0.7;
+  stroke-linecap: round;
 }
 .backdrop__dot {
   fill: rgba(255, 255, 255, 0.28);
@@ -982,6 +989,19 @@ main {
     order: -1;
     max-width: 200px;
     margin: 0 auto;
+  }
+  /* Keep the board inside the portrait box so it never runs under the text. */
+  .hero__portrait {
+    overflow: visible;
+  }
+  .hero__top {
+    overflow: hidden;
+  }
+  .backdrop {
+    left: -90%;
+    top: -14%;
+    width: 280%;
+    max-height: 100%;
   }
   .hero__copy {
     text-align: center;
