@@ -5,7 +5,7 @@ import { ActiveTab, Section } from "./components/Section";
 import { Spectrum } from "./components/Spectrum";
 import { legacy } from "./data/legacy";
 import {
-  bio, conferences, editorial, education, experience, identity, links, projects, scholars, type SectionId,
+  bio, bands, conferences, editorial, education, experience, identity, links, projects, scholars, type SectionId,
 } from "./data/profile";
 import { safeLink } from "./lib/publications";
 
@@ -149,6 +149,19 @@ export function App() {
               <h3 className="h3">Interests</h3>
               <ul className="chips chips--static">
                 {legacy.interests.map((i) => <li key={i} className="chip chip--plain">{i}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h3 className="h3">Frequency bands in the papers</h3>
+              <ul className="chips chips--static">
+                {bands.map((b) => (
+                  <li key={b.id}>
+                    <button type="button" className="chip" onClick={() => pickBand(b.query)}>
+                      {b.label}
+                      <span className="chip__n" aria-hidden="true">↗ papers</span>
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
