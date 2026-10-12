@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { Hero } from "./components/Hero";
 import { Publications } from "./components/Publications";
-import { Section } from "./components/Section";
+import { ActiveTab, Section } from "./components/Section";
+import { Spectrum } from "./components/Spectrum";
 import { legacy } from "./data/legacy";
 import {
   bio, bands, conferences, editorial, education, experience, identity, links, projects, type SectionId,
@@ -51,55 +52,86 @@ function useTheme(): [Theme | null, () => void] {
   return [theme, toggle];
 }
 
-function useActiveSection(): SectionId | null {
-  const [active, setActive] = useState<SectionId | null>(null);
+const isSectionId = (v: string): v is SectionId => NAV.some((n) => n.id === v);
+
+/** The active tab lives in the URL hash so every tab is linkable and Back works. */
+function useTab(): [SectionId, (id: SectionId) => void] {
+  const read = (): SectionId => {
+    const h = window.location.hash.slice(1);
+    return isSectionId(h) ? h : "about";
+  };
+  const [tab, setTab] = useState<SectionId>(read);
   useEffect(() => {
-    const els = NAV.map((n) => document.getElementById(n.id)).filter((e): e is HTMLElement => e !== null);
-    const io = new IntersectionObserver(
-      (entries) => {
-        const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (hit) setActive(hit.target.id as SectionId);
-      },
-      { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.25, 0.5, 1] },
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    const onHash = () => setTab(read());
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
   }, []);
-  return active;
+  const select = useCallback((id: SectionId) => {
+    setTab(id);
+    if (window.location.hash.slice(1) !== id) window.history.pushState(null, "", `#${id}`);
+  }, []);
+  return [tab, select];
 }
 
 export function App() {
   const [query, setQuery] = useState("");
   const [, toggleTheme] = useTheme();
-  const active = useActiveSection();
+  const [tab, selectTab] = useTab();
+  const tabsRef = useRef<HTMLDivElement>(null);
 
-  const pickBand = useCallback((q: string) => {
-    setQuery(q);
-    document.getElementById("publications")?.scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-    });
-  }, []);
+  const pickBand = useCallback(
+    (q: string) => {
+      setQuery(q);
+      selectTab("publications");
+      tabsRef.current?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      });
+    },
+    [selectTab],
+  );
+
+  // Roving tabindex: arrow keys move between tabs, Home/End jump to the ends.
+  const onTabKey = (e: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const last = NAV.length - 1;
+    const next =
+      e.key === "ArrowRight" ? (index + 1) % NAV.length :
+      e.key === "ArrowLeft" ? (index - 1 + NAV.length) % NAV.length :
+      e.key === "Home" ? 0 :
+      e.key === "End" ? last : -1;
+    if (next < 0) return;
+    e.preventDefault();
+    selectTab(NAV[next].id);
+    document.getElementById(`tab-${NAV[next].id}`)?.focus();
+  };
 
   return (
     <>
-      <a className="skip" href="#about">Skip to content</a>
-      <nav className="nav" aria-label="Sections">
-        <a className="nav__brand" href="#top">BM</a>
-        <ul>
-          {NAV.map((n) => (
-            <li key={n.id}>
-              <a href={`#${n.id}`} aria-current={active === n.id ? "true" : undefined}>{n.label}</a>
-            </li>
+      <a className="skip" href="#content">Skip to content</a>
+      <Hero onToggleTheme={toggleTheme} />
+
+      <div className="tabs" ref={tabsRef}>
+        <div className="tabs__bar" role="tablist" aria-label="Profile sections">
+          {NAV.map((n, i) => (
+            <button
+              key={n.id}
+              id={`tab-${n.id}`}
+              type="button"
+              role="tab"
+              aria-selected={tab === n.id}
+              aria-controls={`panel-${n.id}`}
+              tabIndex={tab === n.id ? 0 : -1}
+              className="tabs__tab"
+              onClick={() => selectTab(n.id)}
+              onKeyDown={(e) => onTabKey(e, i)}
+            >
+              {n.label}
+            </button>
           ))}
-        </ul>
-        <button type="button" className="nav__theme" onClick={toggleTheme} aria-label="Switch colour theme">
-          <span aria-hidden="true">◐</span>
-        </button>
-      </nav>
+        </div>
+      </div>
 
-      <Hero onBand={pickBand} />
-
-      <main>
+      <main id="content">
+        <ActiveTab.Provider value={tab}>
         <Section id="about" title="About" kicker="Profile">
           <div className="prose">
             {bio.map((p) => <p key={p}>{p}</p>)}
@@ -107,6 +139,7 @@ export function App() {
         </Section>
 
         <Section id="research" title="Research" kicker="What the work is about">
+          <Spectrum onPick={pickBand} />
           <div className="split">
             <div>
               <h3 className="h3">Interests</h3>
@@ -257,6 +290,7 @@ export function App() {
             <li><span>University</span><a href={links.university} target="_blank" rel="noreferrer">CMR University</a></li>
           </ul>
         </Section>
+        </ActiveTab.Provider>
       </main>
 
       <footer className="footer">
