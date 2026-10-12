@@ -153,12 +153,11 @@ export function App() {
             </div>
             <div>
               <h3 className="h3">Frequency bands in the papers</h3>
-              <ul className="chips chips--static">
+              <ul className="linkrow">
                 {bands.map((b) => (
                   <li key={b.id}>
-                    <button type="button" className="chip" onClick={() => pickBand(b.query)}>
+                    <button type="button" className="linkish" onClick={() => pickBand(b.query)}>
                       {b.label}
-                      <span className="chip__n" aria-hidden="true">↗ papers</span>
                     </button>
                   </li>
                 ))}
