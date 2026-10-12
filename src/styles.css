@@ -522,13 +522,26 @@ main {
 }
 
 .prose {
-  max-width: 68ch;
   display: grid;
-  gap: 16px;
+  gap: clamp(20px, 3vw, 32px);
   font-size: 1.05rem;
 }
-.prose p:first-child {
-  font-size: 1.2rem;
+.prose__lead {
+  max-width: 62rem;
+  font: 500 clamp(1.25rem, 2.2vw, 1.6rem)/1.45 var(--font-display);
+}
+/* Two readable columns (about 65 characters each) instead of one narrow strip. */
+.prose__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px clamp(28px, 5vw, 64px);
+  padding-top: clamp(20px, 3vw, 32px);
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .prose__cols {
+    grid-template-columns: 1fr;
+  }
 }
 
 .split {

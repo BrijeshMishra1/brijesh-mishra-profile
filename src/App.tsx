@@ -134,7 +134,10 @@ export function App() {
         <ActiveTab.Provider value={tab}>
         <Section id="about" title="About" kicker="Profile">
           <div className="prose">
-            {bio.map((p) => <p key={p}>{p}</p>)}
+            <p className="prose__lead">{bio[0]}</p>
+            <div className="prose__cols">
+              {bio.slice(1).map((p) => <p key={p}>{p}</p>)}
+            </div>
           </div>
         </Section>
 
