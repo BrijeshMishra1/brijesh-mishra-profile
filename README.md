@@ -12,6 +12,15 @@ npm test           # data and filter logic
 npm run build      # type-check + production build into dist/
 ```
 
+## Publish
+
+The site is served from the `gh-pages` branch: https://brijeshmishra1.github.io/brijesh-mishra-profile/
+
+```bash
+git push origin main   # source
+scripts/deploy.sh      # build and publish to gh-pages
+```
+
 ## Where the content lives
 
 | File | What it holds |
