@@ -68,3 +68,8 @@ export function splitAuthors(authors: string, owner = "Brijesh Mishra"): { text:
 export function safeLink(url: string | null): string | null {
   return url && /^https:\/\//i.test(url) ? url : null;
 }
+
+/** A search on Google Scholar, offered when a paper has no DOI of its own. */
+export function scholarSearchUrl(title: string): string {
+  return `https://scholar.google.com/scholar?q=${encodeURIComponent(title)}`;
+}

@@ -1,4 +1,5 @@
 import raw from "./legacy.json";
+import doiLinks from "./links.json";
 
 export type PublicationType = "sci" | "scopus" | "peer" | "chapter" | "conference";
 
@@ -52,4 +53,17 @@ export function parseLegacy(input: unknown): Legacy {
   return d;
 }
 
-export const legacy: Legacy = parseLegacy(raw);
+/** DOI links found by scripts/resolve_links.py (Crossref-verified), keyed by exact title. */
+const LINKS: Readonly<Record<string, string>> = doiLinks;
+
+export function withLinks(data: Legacy): Legacy {
+  return {
+    ...data,
+    publications: data.publications.map((p) => {
+      const own = p.link && p.link.startsWith("https://") ? p.link : null;
+      return { ...p, link: own ?? LINKS[p.title] ?? null };
+    }),
+  };
+}
+
+export const legacy: Legacy = withLinks(parseLegacy(raw));

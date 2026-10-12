@@ -1,7 +1,7 @@
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import { legacy } from "../data/legacy";
 import {
-  TYPE_LABEL, TYPE_ORDER, countByType, filterPublications, groupByYear, safeLink, splitAuthors, yearsOf,
+  TYPE_LABEL, TYPE_ORDER, countByType, filterPublications, groupByYear, safeLink, scholarSearchUrl, splitAuthors, yearsOf,
   type TypeFilter,
 } from "../lib/publications";
 
@@ -108,8 +108,10 @@ export function Publications({ query, onQuery }: Props) {
                     <span className="pub__venue-text">{p.venue}</span>
                     {p.impact !== null && <span className="tag tag--if">IF {p.impact}</span>}
                     {p.corresponding && <span className="tag">Corresponding author</span>}
-                    {href && (
+                    {href ? (
                       <> <a className="pub__link" href={href} target="_blank" rel="noreferrer">Link</a></>
+                    ) : (
+                      <> <a className="pub__link" href={scholarSearchUrl(p.title)} target="_blank" rel="noreferrer">Find on Scholar</a></>
                     )}
                   </p>
                 </li>

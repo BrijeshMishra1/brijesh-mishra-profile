@@ -10,6 +10,17 @@ describe("legacy data", () => {
     expect(legacy.books).toHaveLength(5);
   });
 
+  it("links the 8x8 n48/n77/n78 paper to its DOI", () => {
+    const p = legacy.publications.find((x) => x.title.startsWith("High performance metrics 8×8"));
+    expect(p?.link).toBe("https://doi.org/10.1007/s11277-026-12012-5");
+  });
+
+  it("leaves only papers that no registry knows without a DOI link", () => {
+    const unlinked = legacy.publications.filter((p) => !p.link);
+    expect(unlinked.length).toBeLessThanOrEqual(6);
+    expect(legacy.publications.every((p) => !p.link || p.link.startsWith("https://"))).toBe(true);
+  });
+
   it("rejects a malformed file", () => {
     expect(() => parseLegacy({})).toThrow(/rerun scripts/);
   });
