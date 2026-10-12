@@ -208,6 +208,7 @@ ol {
 }
 .hero__text {
   min-width: 0;
+  padding-top: clamp(8px, 1.2vw, 16px);
 }
 
 .hero__grid {
@@ -215,7 +216,8 @@ ol {
   /* Full-bleed: the hero starts at the page gutter, not at the content column. */
   max-width: none;
   margin: 0;
-  padding: clamp(20px, 3vw, 32px) var(--edge-right) 0 var(--edge-left);
+  /* Same minimal margin on top as on the left, so the logo sits in the corner. */
+  padding: var(--edge-left) var(--edge-right) 0 var(--edge-left);
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: clamp(16px, 4vw, 56px);
