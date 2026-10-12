@@ -44,6 +44,7 @@ export const identity = {
   role: "Associate Professor, Electronics and Communication Engineering",
   org: "School of Engineering and Technology, CMR University, Bengaluru",
   credentials: ["IEEE Senior Member", "IETE Fellow"],
+  /** CMR University logo (public/cmr-university.png). Not shown for now; kept for a later layout. */
   logo: "cmr-university.png",
   logoAlt: "CMR University, Bengaluru. Accredited A grade by NAAC",
   photo: "brijesh.jpg",

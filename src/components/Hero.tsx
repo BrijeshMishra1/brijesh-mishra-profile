@@ -23,28 +23,23 @@ export function Hero({ onToggleTheme }: Props) {
       <div className="hero__top">
         <div className="hero__grid">
           <div className="hero__copy">
-            <a className="hero__logo" href={links.university} target="_blank" rel="noreferrer">
-              <img src={identity.logo} alt={identity.logoAlt} width={524} height={149} />
-            </a>
-            <div className="hero__text">
-              <p className="eyebrow">{identity.credentials.join(" · ")}</p>
-              <h1 className="hero__name">{identity.name}</h1>
-              <p className="hero__role">{identity.role}</p>
-              <p className="hero__org">{identity.org}</p>
-              <div className="hero__actions">
-                <a className="btn btn--solid" href={links.scholar} target="_blank" rel="noreferrer">
-                  Google Scholar
-                </a>
-                <a className="btn" href={links.orcid} target="_blank" rel="noreferrer">
-                  ORCID
-                </a>
-                <a className="btn" href={`mailto:${links.emailInstitutional}`}>
-                  Email
-                </a>
-                <button className="btn btn--ghost" type="button" onClick={() => window.print()}>
-                  Save as PDF
-                </button>
-              </div>
+            <p className="eyebrow">{identity.credentials.join(" · ")}</p>
+            <h1 className="hero__name">{identity.name}</h1>
+            <p className="hero__role">{identity.role}</p>
+            <p className="hero__org">{identity.org}</p>
+            <div className="hero__actions">
+              <a className="btn btn--solid" href={links.scholar} target="_blank" rel="noreferrer">
+                Google Scholar
+              </a>
+              <a className="btn" href={links.orcid} target="_blank" rel="noreferrer">
+                ORCID
+              </a>
+              <a className="btn" href={`mailto:${links.emailInstitutional}`}>
+                Email
+              </a>
+              <button className="btn btn--ghost" type="button" onClick={() => window.print()}>
+                Save as PDF
+              </button>
             </div>
           </div>
           <figure className="hero__portrait">
