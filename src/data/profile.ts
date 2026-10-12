@@ -44,6 +44,8 @@ export const identity = {
   role: "Associate Professor, Electronics and Communication Engineering",
   org: "School of Engineering and Technology, CMR University, Bengaluru",
   credentials: ["IEEE Senior Member", "IETE Fellow"],
+  logo: "cmr-university.png",
+  logoAlt: "CMR University, Bengaluru. Accredited A grade by NAAC",
   photo: "brijesh.jpg",
   /** Same portrait with the backdrop removed, so it blends into any hero colour. */
   photoCutout: "brijesh.webp",

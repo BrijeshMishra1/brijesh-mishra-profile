@@ -217,6 +217,21 @@ ol {
   color: #ffd98f;
 }
 
+.hero__logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+.hero__logo img {
+  display: block;
+  height: 46px;
+  width: auto;
+}
+
 .hero__name {
   font-size: clamp(2.1rem, 5vw, 3.4rem);
   font-weight: 700;

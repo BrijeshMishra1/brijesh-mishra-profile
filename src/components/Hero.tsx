@@ -23,6 +23,9 @@ export function Hero({ onToggleTheme }: Props) {
       <div className="hero__top">
         <div className="hero__grid">
           <div className="hero__copy">
+            <a className="hero__logo" href={links.university} target="_blank" rel="noreferrer">
+              <img src={identity.logo} alt={identity.logoAlt} width={524} height={149} />
+            </a>
             <p className="eyebrow">{identity.credentials.join(" · ")}</p>
             <h1 className="hero__name">{identity.name}</h1>
             <p className="hero__role">{identity.role}</p>
