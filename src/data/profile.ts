@@ -152,6 +152,21 @@ export const projects: readonly Project[] = [
   },
 ];
 
+export type GuidanceStatus = "Completed" | "Pursuing";
+
+export interface Scholar {
+  name: string;
+  status: GuidanceStatus;
+}
+
+/** Research scholars guided by Dr. Mishra, in the order supplied. */
+export const scholars: readonly Scholar[] = [
+  { name: "Mrs. Puspanjali J", status: "Completed" },
+  { name: "Mr. K Vijay Kumar", status: "Pursuing" },
+  { name: "Mrs. Sunitha", status: "Pursuing" },
+  { name: "Raja Rajeshwari", status: "Pursuing" },
+];
+
 export const editorial: readonly string[] = [
   "Editorial board: Scientific Reports (Nature Portfolio)",
   "Editorial board: Scientific Reviews (Nature Portfolio)",
@@ -187,6 +202,7 @@ export const sectionIds = [
   "publications",
   "patents",
   "projects",
+  "guidance",
   "service",
   "toolkit",
   "contact",

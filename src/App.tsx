@@ -5,7 +5,7 @@ import { ActiveTab, Section } from "./components/Section";
 import { Spectrum } from "./components/Spectrum";
 import { legacy } from "./data/legacy";
 import {
-  bio, bands, conferences, editorial, education, experience, identity, links, projects, type SectionId,
+  bio, bands, conferences, editorial, education, experience, identity, links, projects, scholars, type SectionId,
 } from "./data/profile";
 import { safeLink } from "./lib/publications";
 
@@ -19,6 +19,7 @@ const NAV: { id: SectionId; label: string }[] = [
   { id: "publications", label: "Papers" },
   { id: "patents", label: "Patents & books" },
   { id: "projects", label: "Projects" },
+  { id: "guidance", label: "Research guidance" },
   { id: "service", label: "Service" },
   { id: "toolkit", label: "Toolkit" },
   { id: "contact", label: "Contact" },
@@ -235,6 +236,36 @@ export function App() {
               </li>
             ))}
           </ul>
+        </Section>
+
+        <Section id="guidance" title="Research guidance" kicker="Scholars guided">
+          <p className="guidance__summary">
+            {scholars.filter((x) => x.status === "Completed").length} completed ·{" "}
+            {scholars.filter((x) => x.status === "Pursuing").length} pursuing
+          </p>
+          <table className="guidance">
+            <caption className="sr-only">Research scholars guided by Dr. Brijesh Mishra</caption>
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Scholar</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scholars.map((x, i) => (
+                <tr key={x.name}>
+                  <td>{i + 1}</td>
+                  <th scope="row">{x.name}</th>
+                  <td>
+                    <span className={`status status--${x.status === "Completed" ? "completed" : "ongoing"}`}>
+                      {x.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </Section>
 
         <Section id="service" title="Service to the community" kicker="Editorial, conferences, reviewing">
