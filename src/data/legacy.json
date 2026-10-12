@@ -1,0 +1,864 @@
+{
+ "publications": [
+  {
+   "type": "sci",
+   "year": 2026,
+   "authors": "Brijesh Mishra, Himanshu Sharma, Neeraj Kumar Misra, Aditya Kumar Singh, T. Y. Satheesha and Sameena Pathan",
+   "title": "Parasitically Coupled 16-port Massive MIMO Antenna for mmWave Applications",
+   "venue": "Scientific Reports, Nature Journal, 2026.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1038/s41598-026-55671-x"
+  },
+  {
+   "type": "sci",
+   "year": 2026,
+   "authors": "Brijesh Mishra and Preksha B V",
+   "title": "High performance metrics 8×8 element MIMO antenna for 5G NR-n48, n77, n78 band applications",
+   "venue": "Wireless Personal Communications, Springer, vol. 146, pp. 2185–2213, 2026.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2026,
+   "authors": "Puspanjali J, Brijesh Mishra, T. Y. Sateesha",
+   "title": "Compact High-Gain, High-Isolation 4-Port MIMO Array Antenna with Broadband Performance for 5G Millimeter-Wave Applications",
+   "venue": "International Journal of Microwave and Wireless Technologies, pp. 1–12, 2026.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1017/S1759078726103262"
+  },
+  {
+   "type": "sci",
+   "year": 2026,
+   "authors": "Brijesh Mishra, R. Sethumadhavi, S. Singh et al.",
+   "title": "An ultra-compact and high isolated 8×8 MIMO antenna system for 5G NR-n46 and n79 band applications",
+   "venue": "Scientific Reports, Nature Journal, vol. 16, 12523, 2026.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2026,
+   "authors": "Brijesh Mishra, Amrees Pandey, Sweta Singh, Aditya Kumar Singh and Saiyed Salim Sayeed",
+   "title": "8×8 element MIMO antenna for unmanned aerial vehicles, V2X and 5G applications",
+   "venue": "Scientific Reports, Nature Journal, vol. 16, 780, 2026.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1038/s41598-025-30351-4"
+  },
+  {
+   "type": "sci",
+   "year": 2026,
+   "authors": "Brijesh Mishra*, Vishal Goyal, T. Y. Satheesha, Tapan Kumar Trivedi, Subhav Singh, Saurav Dixit, S. A. Siddique and Manoj Tolani",
+   "title": "Terahertz Antenna Techniques for Advanced and 6G Wireless Networks: A Comprehensive Review",
+   "venue": "China Communications, IEEE, vol. 23, no. 5, pp. 293–332, 2026.",
+   "impact": 3.1,
+   "corresponding": true,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2025,
+   "authors": "R. Sethumadhavi, Brijesh Mishra, Aditya Kumar Singh, Dinesh Yadav, Supraja Eduru and T. Y. Satheesha",
+   "title": "Dual and wideband mmWave 28/38 GHz quad port MIMO antenna for 5G and beyond applications",
+   "venue": "Scientific Reports, Nature Journal, vol. 15, 44195, 2025.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1038/s41598-025-27924-8"
+  },
+  {
+   "type": "sci",
+   "year": 2025,
+   "authors": "Puspanjali and Brijesh Mishra",
+   "title": "Four-Element Printed Array Antenna with Corporate Feed Network Arrangement for N79 5G Applications",
+   "venue": "Physica Scripta, IOP, vol. 100, 105505, 2025.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1088/1402-4896/ae0a05"
+  },
+  {
+   "type": "sci",
+   "year": 2025,
+   "authors": "A. Kumar, Brijesh Mishra and P. Pattanayak",
+   "title": "High isolated compact 6-Port MIMO antenna with wideband coverage for 5G NR (n7, n38, n41, n53, n90) applications",
+   "venue": "Physica Scripta, IOP, 2025.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1088/1402-4896/add585"
+  },
+  {
+   "type": "sci",
+   "year": 2025,
+   "authors": "Brijesh Mishra, Aditya Kumar Singh*, Saiyed Salim Sayeed and Amrees Pandey",
+   "title": "Inverted L-shaped with rectangular annular ring ground plane 4-port MIMO antenna for satellite and 5G NR applications",
+   "venue": "Physica Scripta, IOP Science, 2025.",
+   "impact": null,
+   "corresponding": true,
+   "link": "https://doi.org/10.1088/1402-4896/ada406"
+  },
+  {
+   "type": "sci",
+   "year": 2025,
+   "authors": "P. Yadav, V. Yadav, J. A. Ansari, V. Singh and Brijesh Mishra* and R. K. Verma",
+   "title": "An Equivalent Circuit and Analysis of Reconfigurable Antenna for Penta-Band Wireless Applications",
+   "venue": "Physica Scripta, IOP Science, 2025.",
+   "impact": null,
+   "corresponding": true,
+   "link": "https://doi.org/10.1088/1402-4896/add216"
+  },
+  {
+   "type": "sci",
+   "year": 2024,
+   "authors": "Brijesh Mishra*, Vandana Yadav, Amrees Pandey, Chaithra MH, R. SethuMadhavi, T. Y. Satheesha and Prakhar Yadav",
+   "title": "High isolated 8-port MIMO antenna and 16-port massive antenna for mm wave (5G NR-n260) applications in time division duplex mode",
+   "venue": "Scientific Reports, Nature Journal, 2024.",
+   "impact": 3.8,
+   "corresponding": true,
+   "link": "https://doi.org/10.1038/s41598-024-82172-6"
+  },
+  {
+   "type": "sci",
+   "year": 2024,
+   "authors": "Soham Majumder, Prabina Pattanayak, Akhilesh Kumar, Dukhishyam Sabat, Ramesh Kumar Verma, Brijesh Mishra and Ashraf Hossain",
+   "title": "Isolation enhancement of the F-shaped four-port MIMO antenna for WiMAX, Wi-Fi, WLAN and ISM band applications using dielectric material",
+   "venue": "Journal of Electromagnetic Waves and Applications, 38:12, 1328–1346, 2024.",
+   "impact": 1.2,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2024,
+   "authors": "Krishna Kant Agrawal, Devesh Mishra, Nitin Kumar Gaur, Vandana Yadav and Brijesh Mishra*",
+   "title": "Machine learning driven four-elements high gain MIMO antenna for wireless connectivity",
+   "venue": "Cluster Computing, Springer Nature, 2024.",
+   "impact": 3.6,
+   "corresponding": true,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2024,
+   "authors": "K Shrivastava, Brijesh Mishra* and R. K. Singh",
+   "title": "Compact dual band notch semicircular patch antenna for C/X/Ku/K band applications",
+   "venue": "Wireless Personal Communications, Springer Nature, 2024.",
+   "impact": 2.2,
+   "corresponding": true,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2023,
+   "authors": "Nagesh Kallollu Narayaswamy, Krishna Kanth Varma P, Brijesh Kumar, Rakesh Kumar Singh, Brijesh Mishra* and Dinesh Kumar Singh",
+   "title": "4-port MIMO antenna with novel isolator conducting structure for sub-1GHz/sub-6GHz and RF-energy harvesting applications",
+   "venue": "Journal of Electromagnetic Waves and Applications, 2023",
+   "impact": 1.438,
+   "corresponding": true,
+   "link": "https://doi.org/10.1080/09205071.2023.2224081"
+  },
+  {
+   "type": "sci",
+   "year": 2023,
+   "authors": "Vandana Yadav, Ram Suchit Yadav, Prakhar Yadav, Brijesh Mishra* and Akhilesh Kumar",
+   "title": "Dual and wideband 6-port MIMO antenna for WiFi, LTE and carrier aggregation systems applications",
+   "venue": "AEU - International Journal of Electronics and Communications, vol. 162, pp. 154576, 2023",
+   "impact": 3.169,
+   "corresponding": true,
+   "link": "https://doi.org/10.1016/j.aeue.2023.154576"
+  },
+  {
+   "type": "sci",
+   "year": 2022,
+   "authors": "Nagesh Kallollu Narayaswamy, Nirupama Malavalli Prasad, Sweta Singh, Rakesh Kumar Singh, Akhilesh Kumar and Brijesh Mishra*",
+   "title": "High-isolated, low correlation and wide frequency reconfigurable (2.1–4.2 GHz) MIMO antenna for cognitive radio applications",
+   "venue": "Journal of Electromagnetic Waves and Applications, 2022",
+   "impact": 1.438,
+   "corresponding": true,
+   "link": "https://doi.org/10.1080/09205071.2022.2158374"
+  },
+  {
+   "type": "sci",
+   "year": 2022,
+   "authors": "Ramesh Kumar Verma, Dinesh Kumar Srivastava, Brijesh Mishra*",
+   "title": "Circuit theory model-based analysis of triple-band stub and notches loaded epoxy substrate patch antenna for wireless applications",
+   "venue": "International Journal of Communication Systems, 2022",
+   "impact": 2.047,
+   "corresponding": true,
+   "link": "https://doi.org/10.1002/dac.5052"
+  },
+  {
+   "type": "sci",
+   "year": 2022,
+   "authors": "S. A. Siddique, H. V. Kumar, C. Gosal S, Brijesh Mishra*, N. K. Narayaswamy",
+   "title": "Remote Controlled Reconfigurable Hexa-Band Antenna for RF-Energy Harvesting Systems",
+   "venue": "International Journal of Circuit Theory and Applications, 2022",
+   "impact": 2.03,
+   "corresponding": true,
+   "link": "https://doi.org/10.1002/cta.3144"
+  },
+  {
+   "type": "sci",
+   "year": 2022,
+   "authors": "Brijesh Mishra*, R. Verma and R. K. Singh",
+   "title": "A review on microstrip patch antenna parameters of different geometry and bandwidth enhancement techniques",
+   "venue": "International Journal of Microwave and Wireless Technologies, 2022",
+   "impact": 1.064,
+   "corresponding": true,
+   "link": "https://doi.org/10.1017/S1759078721001148"
+  },
+  {
+   "type": "sci",
+   "year": 2021,
+   "authors": "A. Kumar, N. Kallollu Narayaswamy, H. V. Kumar, Brijesh Mishra*, S. A. Siddique and A. K. Dwivedi",
+   "title": "High-Isolated WiFi-2.4 GHz/LTE MIMO Antenna for RF-Energy Harvesting Applications",
+   "venue": "AEU-International Journal of Electronics and Communications, vol. 141, 2021",
+   "impact": 3.183,
+   "corresponding": true,
+   "link": "https://doi.org/10.1016/j.aeue.2021.153964"
+  },
+  {
+   "type": "sci",
+   "year": 2021,
+   "authors": "A. K. Patel, S. Yadav, Nagesh K N and Brijesh Mishra*",
+   "title": "UWB Hexagonal Patch Antenna Using EBG Structure For C, X, Ku and K (IEEE) Band Applications",
+   "venue": "Wireless Personal Communications, 121, 1405–1422 (2021)",
+   "impact": 1.671,
+   "corresponding": true,
+   "link": "https://doi.org/10.1007/s11277-021-08676-w"
+  },
+  {
+   "type": "sci",
+   "year": 2021,
+   "authors": "K. Srivastava, Brijesh Mishra and R. Singh",
+   "title": "Microstrip-line-fed inverted L-shaped circularly polarized antenna for C-band applications",
+   "venue": "International Journal of Microwave and Wireless Technologies, 2021",
+   "impact": 1.064,
+   "corresponding": false,
+   "link": "https://doi.org/10.1017/S1759078721000635"
+  },
+  {
+   "type": "sci",
+   "year": 2020,
+   "authors": "Rahul Maurya, Puspraj Singh Chauhan, Saloni Srivastava, Brijesh Mishra and Sanjay Kumar Soni",
+   "title": "Energy Detection Investigation over Composite α-μ/Inverse-Gamma Wireless Channel",
+   "venue": "AEU - International Journal of Electronics and Communications, vol. 130, 2020",
+   "impact": 3.183,
+   "corresponding": false,
+   "link": "https://doi.org/10.1016/j.aeue.2020.153556"
+  },
+  {
+   "type": "sci",
+   "year": 2020,
+   "authors": "K. Srivastava, Brijesh Mishra, A. K. Patel and R. Singh",
+   "title": "Circularly polarized defected ground stub matching triple band microstrip antenna for C and X band applications",
+   "venue": "Microwave and Optical Technology Letters, vol. 62, no. 10, pp. 3301-3309, 2020",
+   "impact": 1.392,
+   "corresponding": false,
+   "link": "https://doi.org/10.1002/mop.32450"
+  },
+  {
+   "type": "sci",
+   "year": 2019,
+   "authors": "Brijesh Mishra",
+   "title": "An Ultra-Compact Triple Band Antenna for X/Ku/K Band Applications",
+   "venue": "Microwave and Optical Technology Letters. vol. 61, no. 7, pp. 1857-1862, 2019.",
+   "impact": 1.392,
+   "corresponding": false,
+   "link": "https://doi.org/10.1002/mop.31812"
+  },
+  {
+   "type": "sci",
+   "year": 2019,
+   "authors": "V. Singh, Brijesh Mishra and R. Singh",
+   "title": "Anchor Shape Gap Coupled Patch Antenna for WiMAX and WLAN Applications",
+   "venue": "International Journal for Computation and Mathematics in Electrical and Electronic Engineering. vol. 38, no. 1, pp. 263–286, 2019.",
+   "impact": 0.755,
+   "corresponding": false,
+   "link": "https://doi.org/10.1108/COMPEL-12-2017-0546"
+  },
+  {
+   "type": "sci",
+   "year": 2019,
+   "authors": "V. Singh, Brijesh Mishra and R. Singh",
+   "title": "Dual-wideband Semi-circular Patch Antenna for Ku/K Band Applications",
+   "venue": "Microwave and Optical Technology Letters. vol. 61, no. 2, pp. 323–329, 2019.",
+   "impact": 1.392,
+   "corresponding": false,
+   "link": "https://doi.org/10.1002/mop.31592"
+  },
+  {
+   "type": "sci",
+   "year": 2019,
+   "authors": "Brijesh Mishra, V. Singh and R. Singh",
+   "title": "Gap Coupled H Shaped Antenna for Wireless Applications.",
+   "venue": "Proceedings of the National Academy of Sciences, India Section A: Physical Sciences. vol. 90, no. 2, pp. 725–737, 2019, DOI: 10.1007/s40010-019-00631-6",
+   "impact": 1.544,
+   "corresponding": false,
+   "link": "https://doi.org/10.1007/s40010-019-00631-6"
+  },
+  {
+   "type": "sci",
+   "year": 2018,
+   "authors": "Brijesh Mishra, V. Singh, and R. Singh",
+   "title": "Gap Coupled Dual Band Petal Shape Patch Antenna for WLAN / WiMAX Applications",
+   "venue": ". Advances in Electrical and Electronic Engineering (AEEE). vol. 16, no. 2, pp. 185–198, 2018.",
+   "impact": null,
+   "corresponding": false,
+   "link": "http://advances.utc.sk/index.php/AEEE/article/view/2416"
+  },
+  {
+   "type": "sci",
+   "year": 2018,
+   "authors": "V. Singh, Brijesh Mishra, A. K. Dwivedi and R. Singh",
+   "title": "Inverted L-Notch Loaded Hexa Band Circular Patch Antenna for X, Ku/K Band Applications",
+   "venue": "Microwave and Optical Technology Letters. vol. 60, no. 8, pp. 2081–2088, 2018.",
+   "impact": 1.392,
+   "corresponding": false,
+   "link": "https://doi.org/10.1002/mop.31296"
+  },
+  {
+   "type": "sci",
+   "year": 2017,
+   "authors": "Brijesh Mishra, V. Singh, and R. Singh",
+   "title": "Dual and wide-band slot loaded stacked microstrip patch antenna for WLAN/WiMAX applications",
+   "venue": "Microsystem Technologies. vol. 23, no. 8, pp. 3467–3475, Aug. 2017.",
+   "impact": 2.276,
+   "corresponding": false,
+   "link": "https://doi.org/10.1007/s00542-016-3120-z"
+  },
+  {
+   "type": "sci",
+   "year": 2017,
+   "authors": "Brijesh Mishra, V. Singh, R. K. Singh, N. Singh and R. Singh",
+   "title": "A compact UWB patch antenna with defected ground for Ku/K band applications",
+   "venue": "Microwave and Optical Technology Letters. vol. 60, no. 1, pp. 1-6, 2017.",
+   "impact": 1.392,
+   "corresponding": false,
+   "link": "https://doi.org/10.1002/mop.30911"
+  },
+  {
+   "type": "sci",
+   "year": 2016,
+   "authors": "V. Singh, Brijesh Mishra, P. N. Tripathi, and R. Singh",
+   "title": "A compact quad-band microstrip antenna for S and C-band applications",
+   "venue": "Microwave and Optical Technology Letters. vol. 58, no. 6, pp. 1365–1369, Jun. 2016.",
+   "impact": 1.392,
+   "corresponding": false,
+   "link": "https://doi.org/10.1002/mop.29799"
+  },
+  {
+   "type": "scopus",
+   "year": 2026,
+   "authors": "Sunitha M K and Brijesh Mishra",
+   "title": "Exponential Tactical Unit Algorithm based Network Slicing and Resource Provisioning in 6G",
+   "venue": "SSRG International Journal of Electronics and Communication Engineering, 2026 (doi: 10.14445/23488549/IJECE-V13I7P120)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "scopus",
+   "year": 2024,
+   "authors": "Prachi Gupta and Brijesh Mishra",
+   "title": "A novel structured antenna with microstrip line fed for low-band 5G applications",
+   "venue": "Journal of Engineering Science and Technology Review, 2024 (doi: 10.25103/jestr.175.11)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "scopus",
+   "year": 2024,
+   "authors": "Brijesh Mishra, Aditya Kumar Singh, T Y Satheesha, Ramesh Kumar Verma and Vivek Singh",
+   "title": "From Past to Present: A Comprehensive Review of Antenna Technology in Modern wireless communication",
+   "venue": "Journal of Engineering Science and Technology Review, 17 (3), 179-200, 2024, DOI: 10.25103/jestr.173.20",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "scopus",
+   "year": 2023,
+   "authors": "Brijesh Mishra, S. A. Siddique, R. K. Singh, C. B. Jha, R. R. Tripathi",
+   "title": "High isolated two element MIMO antenna with novel isolator for WiFi, WLAN and wireless applications",
+   "venue": "International Journal of Information Technology, 2023, DOI: 10.1007/s41870-023-01520-3",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.1007/s41870-023-01520-3"
+  },
+  {
+   "type": "scopus",
+   "year": 2020,
+   "authors": "A. K. Dwivedi, Brijesh Mishra, P. N. Tripathi, A. K. Singh and V. Singh",
+   "title": "Design of a Compact CPW-Fed Monopole antenna with Asymmetric Hexagonal Slot Loaded Ground Structure for C/X/Ku Band Applications",
+   "venue": "Electrical, Control and Communication Engineering. vol. 16, no. 1, pp. 15–22, 2020.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "scopus",
+   "year": 2017,
+   "authors": "Brijesh Mishra, V. Singh, C. Jha, A. K. Pandey, and R. Singh",
+   "title": "Microwave band pass filter synthesis using coupled inductor for ISM band applications",
+   "venue": "International Journal of Applied Engineering Research. vol. 12, no. 11, pp. 2862–2867, 2017.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "scopus",
+   "year": 2017,
+   "authors": "V. Singh, Brijesh Mishra, A. K. Pandey, A. K. Patel, S. Yadav and R. Singh",
+   "title": "Triple band CPW fed monopole leaf shaped patch antenna",
+   "venue": "International Journal on Communications Antenna and Propagation. vol. 7, no. 2, pp. 135–141, 2017.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "peer",
+   "year": 2016,
+   "authors": "Brijesh Mishra, V. Singh, A. Dwivedi, and R. Singh",
+   "title": "Dual band microstrip patch antenna with double- sided notch",
+   "venue": "International. Journal of Computer Applications. vol. 6, no. 1, pp. 106–108, 2016. (Journal no-64190 & Serial no-3)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "peer",
+   "year": 2016,
+   "authors": "A. Varshney, Brijesh Mishra, Chandrabhan, A. Dwivedi and R. Singh",
+   "title": "Smart bike helmet and accident prevention system",
+   "venue": "International Journal for Electro Computational World Knowledge Interface, Vol. 4, Issue 2, pp. 1-6, 2016.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "peer",
+   "year": 2015,
+   "authors": "Brijesh Mishra, Chandra Bhan, G. Chandra and R. Singh",
+   "title": "Compact triple band T-shape microstrip patch antenna",
+   "venue": "International Journal of Emerging Trends in Engineering and Development, Vol. 6, Issue 5, pp. 127-130, 2015.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "peer",
+   "year": 2015,
+   "authors": "V. Singh and Brijesh Mishra",
+   "title": "FPGA implementation of various lines coding technique for efficient transmission of digital data in communication",
+   "venue": "International Journal of Research. in Engineering and Technology, Vol. 3, Issue 4, pp. 60-63. 2014.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2026,
+   "authors": "Brijesh Mishra*, K. Ezhilarasan, Vivek Singh, T Y Satheesha, Prakhar and Aasheesh Shukla",
+   "title": "Suppressed mutual coupling and high isolated MIMO antenna for 5G- sub-6-GHz/n78 applications",
+   "venue": "Lecture Notes in Networks and Systems (Springer), 2026, ISBN: 978-981-95-2494-5.",
+   "impact": null,
+   "corresponding": true,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2023,
+   "authors": "A. Pandey, Brijesh Mishra, A. K. Singh, S. Singh and R. Singh",
+   "title": "Quad-band MIMO antenna for radar and satellite applications",
+   "venue": "Lecture Notes in Electrical Engineering (Springer), pp. 605-616, 2023. doi.org/10.1007/978-981-19-0312-032.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2022,
+   "authors": "K. Singh, S. A. Siddique, S. K. Soni, and Brijesh Mishra",
+   "title": "Two Element Annular Ring MIMO Antenna for 2.4, 5.8 GHz Frequency Band",
+   "venue": "Lecture Notes in Networks and Systems (Springer), pp. 395-403, 2022.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2022,
+   "authors": "A. Kumar, S. A. Siddique, S. K. Soni, K. Singh and Brijesh Mishra",
+   "title": "Four port compact MIMO antenna for 5.8GHz applications",
+   "venue": "Lecture Notes in Electrical Engineering (Springer), doi.org/10.1007/978-981-19-031260.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2022,
+   "authors": "Brijesh Mishra, V. Singh, and S. A. Siddiqui",
+   "title": "Study of microstrip antenna geometry: effect of antenna geometry on antenna parameters-a comprehensive review",
+   "venue": "Optical and Wireless Technologies. Lecture Notes in Electrical Engineering (Springer), doi.org/10.1007/978-981-16-2818-42",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2022,
+   "authors": "Brijesh Mishra, V. Singh, S. K. Soni and S. A. Siddiqui",
+   "title": "Reconfigurable hexa-band antenna with defected ground structure for 2.1- 3.4 GHz band applications",
+   "venue": "Optical and Wireless Technologies. Lecture Notes in Electrical Engineering (Springer) (accepted)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2022,
+   "authors": "A. K. Dwivedi, Brijesh Mishra, C. B. Jhan, S. A. Siddiqui and V. Singh",
+   "title": "A CPW-Fed Annular Shape Antenna with Asymmetrical Hexagonal Slot Loaded Defected Ground Plane for Ultra-Wideband Applications",
+   "venue": "Optical and Wireless Technologies. Lecture Notes in Electrical Engineering (Springer), pp. 483-490, 2022. doi.org/10.1007/978-981-16-2818-452",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2022,
+   "authors": "Sweta Singh, Brijesh Mishra, Karunesh Shrivastva, Aditya Singh, Rajeev Singh",
+   "title": "Multiband and Wideband MIMO Antenna for X and Ku Band Applications",
+   "venue": "Optical and Wireless Technologies. Lecture Notes in Electrical Engineering (Springer). pp. 557-566, 2022. doi.org/10.1007/978-981-16-2818-459",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2019,
+   "authors": "Brijesh Mishra, V. Singh, and R. Singh",
+   "title": "Gap Coupled Swastika Shaped Patch Antenna for X and Ku-band Applications",
+   "venue": "Optical and Wireless Technologies. Lecture Notes in Electrical Engineering (Springer), pp. 449-455, 2019, DOI: 10.1007/978-981-13-6159-347",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "chapter",
+   "year": 2017,
+   "authors": "Brijesh Mishra, V. Singh, A. K. Dwivedi, A. K. Pandey, A. Sarwar, and R. Singh",
+   "title": "Slots loaded multilayered circular patch antenna for Wi-Fi/WLAN applications",
+   "venue": "Computing and Network Sustainability. Lecture Notes in Networks and Systems 12 (Springer), pp. 49–59, 2017. DOI: 10.1007/978-981-10-3935-56",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2026,
+   "authors": "Brijesh Mishra et al.",
+   "title": "A Comprehensive Review on Machine Learning and Metasurface/Metamaterial Driven MIMO Antenna for mmWave Applications",
+   "venue": "IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI-2026), 2026, DOI: 10.1109/IATMSI68868.2026.11465776",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2025,
+   "authors": "K Vijayakumar, Brijesh Mishra",
+   "title": "Analysis and Designing of a Novel Compact 2-Port MIMO Antenna for n260 band 5G Applications",
+   "venue": "in IEEE International Conference on Modern Electronics Devices and Intelligent Communication Systems (MEDCOM), 2025 (DOI: 10.1109/MEDCOM67532.2025.11405275)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2025,
+   "authors": "K Vijayakumar, Brijesh Mishra",
+   "title": "Dual-Port Wideband MIMO Antenna with Pattern Diversity and High Isolation for mm-Wave 5G",
+   "venue": "in IEEE International Conference on Advanced Topics in Electrical Engineering (ATEE-2025), 2025 (10.1109/ATEE66006.2025.11299962)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2025,
+   "authors": "Pushpanjali J, Brijesh Mishra, T. Y. Satheesha",
+   "title": "Dual band Quasi-Yagi-Uda antenna array for wireless applications",
+   "venue": "in IEEE International Conference on Advanced Topics in Electrical Engineering (ATEE-2025), 2025 (10.1109/ATEE66006.2025.11299953)",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2020,
+   "authors": "V. K. Upaddhyay, P. S. Chauhan, S. K. Soni, and Brijesh Mishra",
+   "title": "On the Performance Analysis of Cognitive Radio Based Wireless System over Weibull-Inverse Gamma Composite Fading Channel",
+   "venue": "in 2020 International Conference on Electrical and Electronics Engineering (ICE3-2020), pp. 484–488, 2020",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2020,
+   "authors": "A. Singh, S. K. Soni, S. A. Siddiqui, and Brijesh Mishra",
+   "title": "A Hexaband Frequency Reconfigurable Patch Antenna for Wireless Applications",
+   "venue": "in 2020 International Conference on Electrical and Electronics Engineering (ICE3-2020), pp. 568–573, 2020",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2020,
+   "authors": "A. K. Patel, Brijesh Mishra, S. A. Siddiqui, and R. Singh",
+   "title": "MultiBand Gap Coupled Staircase Patch Antenna for Wireless Applications",
+   "venue": "in 2020 International Conference on Electrical and Electronics Engineering (ICE3-2020), pp. 21–26, 2020",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2020,
+   "authors": "M. K. Rauniyar, Brijesh Mishra, S. K. Soni, S. A. Siddiqui, and A. Singh",
+   "title": "Design and Analysis of Multilayer Antenna for 5G and Satellite Applications",
+   "venue": "in 2020 International Conference on Electrical and Electronics Engineering (ICE3-2020), pp. 554–558, 2020",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2015,
+   "authors": "Brijesh Mishra, V. Singh, and R. Singh",
+   "title": "Design, analysis and simulation of microwave coupler",
+   "venue": "in 2015 International Conference on Signal Processing and Communication (ICSC), 2015, pp. 370–373.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2015,
+   "authors": "V. Singh, Brijesh Mishra, and R. Singh",
+   "title": "A compact and wide band microstrip patch antenna for X-band applications",
+   "venue": "in 2015 Second International Conference on Advances in Computing and Communication Engineering, 2015, pp. 296–300.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2015,
+   "authors": "C. Bhan, A. K. Dwivedi, Brijesh Mishra, and A. Kumar",
+   "title": "Quad bands U-shaped slot loaded probe fed microstrip patch antenna",
+   "venue": "in 2015 Second International Conference on Advances in Computing and Communication Engineering, 2015, pp. 409–412.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "conference",
+   "year": 2015,
+   "authors": "C. Bhan, V. Singh, Brijesh Mishra, and A. Kumar",
+   "title": "A Dual Band Double Inverted L-Slots Microstrip Patch Antenna",
+   "venue": "in 2015 Second International Conference on Advances in Computing and Communication Engineering, 2015, pp. 89–91.",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  }
+ ],
+ "books": [
+  {
+   "text": "A. K. Dwivedi, V. Singh and Brijesh Mishra, “Ubiquitous Technology in Communication and Artificial Intelligence (UTCA 2023)”, American Institute of Physics (AIP), 2024. ISBN: 9780735450219",
+   "link": null
+  },
+  {
+   "text": "Brijesh Mishra, M. Tiwari “VLSI, Microwave and Wireless Technologies-Proceedings of ICVMWT 2021”, Lecture notes in electrical engineering, Springer Nature, ISBN: 978-981-19-0311-3, Springer Singapore, 2022",
+   "link": "https://link.springer.com/book/10.1007/978-981-19-0312-0"
+  },
+  {
+   "text": "Brijesh Mishra, R. K. Singh, S. Wariya and M. Tiwari “Intelligent Systems and Smart Infrastructure (ICISSI-2022)” CRC Press, Taylor & Francis Group. ISBN: 978-1-032-41287-0",
+   "link": "https://www.routledge.com/Intelligent-Systems-and-Smart-Infrastructure-Proceedings-of-ICISSI-2022/Mishra-Singh-Wairya-Tiwari/p/book/9781032412870"
+  },
+  {
+   "text": "Saiyed Salim Sayeed, Hemant Kumar Sharma, Pramod Kumar Yadav, Brijesh Mishra, R. K. Singh, S. Wariya and M. Tiwari “Advances in Electronics, Computer, Physical and Chemical Sciences” CRC Press, Taylor & Francis Group. ISBN: 9781041017554",
+   "link": null
+  },
+  {
+   "text": "Brijesh Mishra, Ghanshyam Singh “Reconfigurable Intelligent Surfaces Empowered Terahertz Antenna for Next Generation Communication Networks”, Springer Singapore, 2026 (In production)",
+   "link": null
+  }
+ ],
+ "patents": [
+  {
+   "text": "Hu, Guozhen, Brijesh Mishra, Rakesh Kumar Singh, Nagendra Prasad Yadav, A System for Terahertz Penetration Imaging of Jade Stone (Patent No. 202022100825), German Patent and Trademark Office, 2022"
+  },
+  {
+   "text": "Devesh Mishra, Brijesh Mishra, Krishna Kant Agrawal and Amreesh Pandey, Smart Agricultural Trolley (application no. 375459-001), Indian Patent and Trademark Office, 2022"
+  },
+  {
+   "text": "Dr. Brijesh Mishra, Dr. Shweta Singh, 6G Wireless Antenna (application no. 440672-001), Indian Patent and Trademark Office, 2023 (under examination)"
+  },
+  {
+   "text": "Prabhaker Yadav, Rita Yadav, Devesh Mishra, Brijesh Mishra and Akbar Ahmad, IOT based agriculture drone for monitoring and spraying pesticides (application no. 381820-001), Indian Patent and Trademark Office, 2023 (Filed)"
+  },
+  {
+   "text": "Rakesh Kumar Singh and Brijesh Mishra, Smart steam inhaler (application no. 389865-001), Indian Patent and Trademark Office, 2023"
+  },
+  {
+   "text": "Rakesh Kumar Singh and Brijesh Mishra, Smart ultraviolet monitoring and Sensing device (application no. 389866-001), Indian Patent and Trademark Office, 2023"
+  },
+  {
+   "text": "Brijesh Mishra, Sweta Singh, Tulika Narang, “ARTIFICIAL INTELLIGENCE BASED ANTENNA FOR BIOMEDICAL APPLICATIONS” (application no: 489200-001), Indian Patent and Trademark Office, 2026"
+  },
+  {
+   "text": "Mr. Gaurav Aruna Savale, Dr. Brijesh Mishra, Mr. Dhanush P Chavan, Mr. U Karthik Sagar, Dual and wideband antenna for 5G NR mmWave applications (Application No. 458424-001), Indian Patent and Trademark Office, 2025 (under examination)"
+  },
+  {
+   "text": "Mr. Manoj B M, Dr. Brijesh Mishra, Mr. Rajesh P C, Ms. Preksha B V, Ms. Purimetla Gouthami, Ms. Nagamani G, Ultra-Wideband Two Port EBG Based MIMO Antenna for Satellite Applications (Application No. 458402-001), Indian Patent and Trademark Office, 2025 (under examination)"
+  },
+  {
+   "text": "Ms. Bhavya, Dr. Brijesh Mishra, Ms. Prajnya Kapse, Ms. Sangeetha, Dr. K V Prasad, CMR University, Bengaluru, Karnataka. “Metasurface based wearable MIMO antenna for wireless applications” 2026, Application no: 501094-001"
+  }
+ ],
+ "interests": [
+  "RF & Microwaves",
+  "Microstrip patch antenna, Energy harvesting",
+  "MIMO structure",
+  "Rectenna",
+  "Filters",
+  "Couplers",
+  "Reconfigurable antenna",
+  "Wearable antenna",
+  "Harvesting antenna",
+  "THz antenna",
+  "Graphene antenna",
+  "ML and RIS assisted antenna",
+  "RF, microwave and IoT devices"
+ ],
+ "subjects": [
+  "Network analysis and synthesis",
+  "Microprocessor",
+  "Digital electronics",
+  "Signals and systems",
+  "Electronics instrumentation and measurements",
+  "Basic electronics",
+  "Control systems",
+  "Engineering Mathematics",
+  "Electromagnetic field theory"
+ ],
+ "activities": [
+  "Participated in two-week workshop on signals and systems held at MNNIT Allahabad, sponsored by MHRD India",
+  "Participated in one-week FDP on communication skills held at SIET Allahabad, sponsored by ISTE",
+  "Paper entitled “A novel design and synthesis of coupled inductor band pass filter ISM band applications\" presented in International conference on recent trends in engineering and material sciences (ICEMS-2016) sponsored by Elsevier",
+  "Paper entitled “A compact and wide band micro-strip patch antenna for X-band applications” presented in Proceedings of 2015 Second International Conference on 3 Advances in Computing and Communication Engineering (2015) sponsored by IEEE",
+  "Participated in one week short term course on “Recent Advances on Passive and Active Components at High Frequencies” during June 25-30, 2018 at IIT BHU, sponsored and funded by AICTE India.",
+  "Organized one-week faculty development program on “VLSI for signal processing and communications” during July 16-20, 2018 at SIET Jhalwa Allahabad, sponsored and funded by TEQIP-III India",
+  "Participated in one day workshop on “Collaborative Research Scheme (CRS)” on 13th May 2019 at Lucknow (UP), sponsored and funded by TEQIP-III India",
+  "Participated in one-week workshop on Advance Pedagogy and Digital Tools during June 17-21, 2019 at IIT Roorkee, sponsored and funded by TEQIP-III India",
+  "Organized two days (14-15 Feb, 2020) IEEE International conference on Electrical and Electronics Engineering (ICE3-2020) at MMM University of Technology, Gorakhpur",
+  "Received best Paper award 2020 IEEE International conference on Electrical and Electronics Engineering (ICE3-2020)",
+  "Jointly organized one-week faculty development program on “Internet of Things: Applications in Emerging Technology”” during Sept 24-28, 2020 at MMM University of Technology in collaboration with SVNIT Surat, sponsored and funded by TEQIP-III India.",
+  "Organized two days (20-21 March, 2021) Scopus indexed Springer International Conference on “International Conference on VLSI and Microwave and Wireless Technologies (ICVMWT-2021)”.",
+  "Worked as an Editor of Scopus indexed edited book entitled “Lecture Notes in Electrical Engineering-Proceedings of ICVMWT 2021”.",
+  "Received best paper award for paper entitled “Four port compact antenna for 5.8GHz applications” presented in Scopus indexed Springer International Conference on “International Conference on VLSI and Microwave and Wireless Technologies (ICVMWT-2021)”.",
+  "Participated in training program on \"Future-skill technologies in 3D Printing & Design” organized at IIT Hyderabad between June 19 – 26, 2021.",
+  "Completed 12-week NPTL course on Network Analysis with Elite + Silver grade",
+  "Completed 12-week NPTL course on Signals and Systems Elite grade",
+  "Completed one-week Atal FDP on “machine Learning Applications on Image Processing” during 17 Jan-21 Jan 2022.",
+  "Completed one-week Atal FDP on “Basics of Electric Vehicles” during 25 Feb-01 March 2022.",
+  "Completed one-week Atal FDP on “Hands-On Workshop on Software Defined Radios” during 07 March-11 March 2022.",
+  "Completed one-week FDP on “Examination Reforms” organized by MMMUT, Gorakhpur during during 26 March 2022- 30 March 2022.",
+  "Organized two days (21-22 May, 2022) International Conference on “International Conference on Intelligent Systems and Smart Infrastructure (ICISSI-2022)” with publishing partner Taylor & Francis.",
+  "Jointly organized one-week faculty development program on “AI and ML applications in electrical and electronics engineering” during August 20-25, 2022 at SIET Prayagraj in collaboration with JK Institute of Applied Physics and Technology, Prayagraj, and I.E.T., Dr. Rammanohar Lohia Avadh University, Ayodhya.",
+  "Recipient of academic excellence award 2022 at SIET Prayagraj",
+  "Completed one-week Atal FDP on “ICT for Teaching and Learning” organized by NITTTR, Chandigarh during 09 January-13 January 2023.",
+  "Completed one-week FDP on “UHV INTRODUCTORY FDP (UHV-I)” organized by AICTE, India during 26 December – 30 December 2022.",
+  "Completed one-week FDP on “Advanced Communication Systems” organized by NITTTR, Chandigarh during 27 February – 03 March 2023.",
+  "Completed one-week FDP on “Recent advancements in science and technology” Alliance University during 06 March – 10 March 2023.",
+  "Organized one-week STC on “Technological innovations in IOT for 5G applications” during October 24-29, 2018 at MMM University, Gorakhpur, sponsored and funded by TEQIP-III India.",
+  "Presented a research article entitled “Reconfigurable hexa-band antenna with defected ground structure for 2.1-3.4 GHz band applications\" in international conference on Optical and Wireless Technology (OWT-2020) sponsored by Springer",
+  "Presented a research article entitled “Study of micro-strip antenna geometry: effect of antenna geometry on antenna parameters-a comprehensive review\" in international conference on Optical and Wireless Technology (OWT-2020) sponsored by Springer",
+  "Presented a research article entitled “A CPW-Fed Annular Shape Antenna with Asymmetrical Hexagonal Slot Loaded Defected Ground Plane for Ultra-Wideband Applications\" in international conference on Optical and Wireless Technology (OWT-2020) sponsored by Springer",
+  "Serving on the Editorial Board of Scientific Reports (Nature Portfolio), Scientific Reviews (Nature Portfolio), Discover Internet of Things (Springer) and Bentham Science journals",
+  "Serving as Associate Editor of IEIE Transactions on Smart Processing & Computing",
+  "Served as Track Chair and Organising Secretary for the IEEE conferences ICICKE-2025 and ICICKE-2026 and the Springer conference ATIS 2026",
+  "Completed two projects (worth Rs. 35 Lakhs) funded by NPIU and the World Bank",
+  "Recipient of Excellence in Performance, Outstanding Contributor and Academic Excellence awards"
+ ],
+ "memberships": [
+  "IEEE (Senior Member) and Industry Applications Society (IAS)-95197316",
+  "The Institution of Electronics and Telecommunication Engineers (IETE) (Fellow)",
+  "Indian Society for Technical Education (ISTE)- LM 130794",
+  "The Institution of Engineers (INDIA) M-1709628",
+  "International Association of Engineers (IAENG-238495)",
+  "Institute for Engineering Research and Publication (IFERP-PM2854532)"
+ ],
+ "reviewer": [
+  "International Journal of Electronics (SCI-indexed)",
+  "International Journal of Sensors, Wireless Communications and Control (Scopus indexed)",
+  "Journal of Engineering Science and Technology Review (Scopus indexed)",
+  "International Conference on Emerging Trends in Communication, Computing and Electronics (IC3E-2018)",
+  "Advances in Science, Technology and Engineering Systems Journal (ASTESJ) (ISSN: 2415-6698)",
+  "IAC3T 2018 2nd International Conference on Advances in Computing, Control and Communication Technology.",
+  "Two Days National Conference on Recent Trends in Devices, Circuits and Communication (RTDC2 -2019) April 15-16, 2019.",
+  "International Conference on “Advances in Electronics, Electrical & Computational Intelligence (ICAEEC-2019).",
+  "International Journal of Electrical and Computer Engineering (IJECE).",
+  "Wireless Personal Communications (SCI-indexed).",
+  "International Conference on “International Conference on VLSI and Microwave and Wireless Technologies (ICVMWT-2021) (Scopus-indexed).",
+  "International Conference on Electrical and Electronics Engineering (ICE3 2020) (Web of science-indexed).",
+  "Journal of Electrical Engineering (SCI-indexed)",
+  "Advances in Technology Innovation (SCOPUS-indexed)",
+  "Indonesian Journal of Electrical Engineering and Computer Science (SCOPUS-indexed)",
+  "Scientific reports (SCI-indexed)",
+  "Cybernetics and Systems (SCI-indexed)",
+  "IET Control Theory & Applications (SCI-indexed)",
+  "Wireless Communications and Mobile Computing (SCI-indexed)",
+  "National Academy Science Letters (SCI-indexed)",
+  "Makara Journal of Technology (ESCI-indexed)",
+  "More than 150 SCI and Scopus indexed journals (reviewer)"
+ ],
+ "tools": [
+  "ANSYS HFSS",
+  "Advanced Design System (ADS)",
+  "AWR (microwave office suit)",
+  "MATLAB and MATLAB Online",
+  "Multisim Live",
+  "EasyEDA (PCB design)",
+  "Tinkercad",
+  "AutoCAD Web App",
+  "Blender (3D creator)",
+  "SMART DRAW",
+  "ORIGIN LAB",
+  "Adobe Illustrator",
+  "CORAL DRAW",
+  "GRAPH DATA EXTRACTOR",
+  "MENDELEY DESKTOP",
+  "LATEX (Overleaf)",
+  "Nitro (PDF tools)",
+  "MICROSOFT OFFICE/EXCEL",
+  "MACHINE LEARNING",
+  "GitHub",
+  "Online C programming compiler (Programiz)",
+  "K-Map solver and number system converter",
+  "Virtual Labs (vlab.co.in)",
+  "Google Classroom",
+  "Research assistants: Nature Research Assistant, LeapSpace, SciSpace, Jenni AI, SmartQuant AI, GPAI",
+  "ChatGPT and Microsoft Copilot",
+  "Grammarly, QuillBot and Hemingway Editor"
+ ]
+}
