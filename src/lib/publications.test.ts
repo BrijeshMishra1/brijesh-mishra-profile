@@ -1,11 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { legacy, parseLegacy } from "../data/legacy";
 import { countByType, filterPublications, groupByYear, safeLink, splitAuthors, yearsOf } from "./publications";
+import synced from "../data/scholar-sync.json";
 import { xFor } from "./spectrum";
+
+// The supplied publication list; papers added later by scripts/sync_scholar.py are tested separately.
+const syncedTitles = new Set(synced.publications.map((p) => p.title));
+const listed = legacy.publications.filter((p) => !syncedTitles.has(p.title));
 
 describe("legacy data", () => {
   it("matches the counts on the publication list", () => {
-    expect(countByType(legacy.publications)).toEqual({ sci: 35, scopus: 7, peer: 4, chapter: 10, conference: 12 });
+    expect(countByType(listed)).toEqual({ sci: 35, scopus: 7, peer: 4, chapter: 10, conference: 12 });
     expect(legacy.patents).toHaveLength(10);
     expect(legacy.books).toHaveLength(5);
   });
@@ -16,9 +21,14 @@ describe("legacy data", () => {
   });
 
   it("leaves only papers that no registry knows without a DOI link", () => {
-    const unlinked = legacy.publications.filter((p) => !p.link);
+    const unlinked = listed.filter((p) => !p.link);
     expect(unlinked.length).toBeLessThanOrEqual(6);
     expect(legacy.publications.every((p) => !p.link || p.link.startsWith("https://"))).toBe(true);
+  });
+
+  it("shows papers found by the Scholar sync alongside the list", () => {
+    expect(legacy.publications).toHaveLength(listed.length + synced.publications.length);
+    for (const t of syncedTitles) expect(legacy.publications.some((p) => p.title === t)).toBe(true);
   });
 
   it("rejects a malformed file", () => {
