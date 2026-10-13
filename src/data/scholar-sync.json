@@ -1,0 +1,30 @@
+{
+ "syncedOn": "2026-10-14",
+ "metrics": {
+  "citations": 990,
+  "hIndex": 19,
+  "i10Index": 27
+ },
+ "publications": [
+  {
+   "type": "conference",
+   "year": 2022,
+   "authors": "RK Verma, A Kumar",
+   "title": "A compact slot and notch loaded microstrip antenna for wireless applications",
+   "venue": "VLSI, Microwave and Wireless Technologies: Select Proceedings of ICVMWT 2021 …, 2022",
+   "impact": null,
+   "corresponding": false,
+   "link": null
+  },
+  {
+   "type": "sci",
+   "year": 2019,
+   "authors": "Komal Jaiswal, Shekhar Yadav, Chetan Sharma, Brijesh Mishra, Ram Suchit Yadav, Rajeev Singh",
+   "title": "Ultra-wideband Aperture Couple Microstrip Patch Antenna for Ka and Q Band Applications",
+   "venue": "SSRN Electronic Journal, Elsevier BV, 2019.",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://doi.org/10.2139/ssrn.3574113"
+  }
+ ]
+}

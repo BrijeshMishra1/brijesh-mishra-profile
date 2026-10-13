@@ -74,4 +74,5 @@ def main():
     print(f"\n{len(links)} resolved links written to {OUT.name}")
 
 
-main()
+if __name__ == "__main__":
+    main()

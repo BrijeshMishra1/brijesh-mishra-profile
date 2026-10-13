@@ -40,3 +40,13 @@ To update publications, edit the legacy page (or `legacy.json`) and re-run the e
 - Keyboard focus rings, skip link, 44 px touch targets, reduced-motion respected, text contrast ≥ 4.5:1.
 - "Save as PDF" prints a clean resume (navigation hidden, every paper listed).
 - Personal details on the legacy page (date of birth, father's name, mobile number, permanent address) are deliberately not carried over.
+
+## Keeping publications current
+
+`scripts/sync_scholar.py` reads the Google Scholar profile, adds papers that are not on the site yet
+(enriched from Crossref when a verified match exists) and refreshes the citation metrics in
+`src/data/scholar-sync.json`. `python3 scripts/sync_scholar.py --dry-run` shows what would change.
+
+`.github/workflows/sync-scholar.yml` runs it every Monday (or on demand from the Actions tab), then
+tests, builds, commits the data file and publishes `gh-pages`. Scholar sometimes blocks cloud IPs; the
+run then changes nothing and succeeds, and the script can be run locally instead.

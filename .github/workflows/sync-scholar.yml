@@ -1,0 +1,63 @@
+name: Sync Google Scholar
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # Mondays 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-scholar
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Google Scholar for new papers
+        id: sync
+        # Exit 2 means Scholar blocked the request: skip quietly, try again next week.
+        run: python3 scripts/sync_scholar.py || [ $? -eq 2 ]
+
+      - uses: actions/setup-node@v4
+        if: steps.sync.outputs.changed == 'true'
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Test and build
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+      - name: Commit data
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/scholar-sync.json
+          git commit -m "Sync Google Scholar: new papers and metrics"
+          git push
+
+      - name: Publish site
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          touch dist/.nojekyll
+          cd dist
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Publish site build"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages

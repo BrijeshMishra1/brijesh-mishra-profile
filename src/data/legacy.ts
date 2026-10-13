@@ -1,5 +1,6 @@
 import raw from "./legacy.json";
 import doiLinks from "./links.json";
+import synced from "./scholar-sync.json";
 
 export type PublicationType = "sci" | "scopus" | "peer" | "chapter" | "conference";
 
@@ -66,4 +67,10 @@ export function withLinks(data: Legacy): Legacy {
   };
 }
 
-export const legacy: Legacy = withLinks(parseLegacy(raw));
+/** Papers found on Google Scholar by scripts/sync_scholar.py are shown with the legacy list. */
+const merged = parseLegacy({
+  ...raw,
+  publications: [...(synced.publications as Publication[]), ...raw.publications],
+});
+
+export const legacy: Legacy = withLinks(merged);

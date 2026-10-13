@@ -4,6 +4,8 @@
  * which scripts/extract_profile.py generates from the legacy profile page.
  */
 
+import sync from "./scholar-sync.json";
+
 export interface Role {
   period: string;
   title: string;
@@ -64,8 +66,11 @@ export const links = {
   legacy: "https://brijeshmishra1.github.io/Dr._Brijesh_mishra/",
 } as const;
 
-/** Google Scholar, read on 2026-10-12. */
-export const scholar = { citations: 989, hIndex: 19, i10Index: 27, asOf: "October 2026" } as const;
+/** Google Scholar metrics, kept current by scripts/sync_scholar.py (scholar-sync.json). */
+export const scholar = {
+  ...sync.metrics,
+  asOf: new Date(`${sync.syncedOn}T00:00:00Z`).toLocaleString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" }),
+} as const;
 
 export const bio: readonly string[] = [
   "Dr. Brijesh Mishra received his M.Tech. in Electronics Engineering (2012) and PhD in Microwave Engineering (2018) from the University of Allahabad, a Central University. He is a Senior Member of IEEE and a Fellow of IETE.",
