@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Sync the profile from Google Scholar and publish it. Works on macOS, Linux and Windows.
+"""Sync the profile from Google Scholar and push it; GitHub Actions publishes the site. Works on macOS, Linux and Windows.
 
 Needs only Python 3.9+, git and Node.js on PATH, and push access to the repo.
 Usage:  python3 scripts/sync_and_publish.py [--no-publish]
 It can be run from any clone (or a fresh `git clone`) on any network.
 """
-import json, pathlib, shutil, subprocess, sys, tempfile
+import pathlib, shutil, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = "src/data/scholar-sync.json"
@@ -19,23 +19,6 @@ def run(*cmd, cwd=ROOT, check=True, capture=False):
     r = subprocess.run([exe, *cmd[1:]], cwd=cwd, check=check, text=True,
                        capture_output=capture)
     return r
-
-
-def publish_pages() -> None:
-    """Build and push dist/ to the gh-pages branch (same result as scripts/deploy.sh)."""
-    remote = run("git", "remote", "get-url", "origin", capture=True).stdout.strip()
-    name = run("git", "config", "user.name", capture=True, check=False).stdout.strip() or "Profile sync"
-    email = run("git", "config", "user.email", capture=True, check=False).stdout.strip() or "noreply@example.com"
-    run("npm", "run", "build")
-    with tempfile.TemporaryDirectory() as tmp:
-        out = pathlib.Path(tmp)
-        shutil.copytree(ROOT / "dist", out, dirs_exist_ok=True)
-        (out / ".nojekyll").touch()
-        run("git", "init", "-q", "-b", "gh-pages", cwd=out)
-        run("git", "add", "-A", cwd=out)
-        run("git", "-c", f"user.name={name}", "-c", f"user.email={email}",
-            "commit", "-q", "-m", "Publish site build", cwd=out)
-        run("git", "push", "-f", remote, "gh-pages", cwd=out)
 
 
 def main() -> int:
@@ -56,8 +39,7 @@ def main() -> int:
     run("git", "add", DATA)
     run("git", "commit", "-q", "-m", "Sync Google Scholar: new papers and metrics" + TRAILER)
     run("git", "push", "-q", "origin", "main")
-    publish_pages()
-    print("Published.")
+    print("Pushed. GitHub Actions rebuilds and publishes the site within a minute or two.")
     return 0
 
 
