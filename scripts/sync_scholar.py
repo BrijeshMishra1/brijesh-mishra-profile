@@ -5,7 +5,10 @@ Papers already in legacy.json or scholar-sync.json (matched on normalised,
 fuzzy title) are skipped, as are front-matter records such as "Preface". A new paper is enriched from Crossref when a verified
 match exists (full author list, journal, DOI link); otherwise the Scholar
 record is used as is. If Scholar blocks the request (it often does for cloud
-IPs) nothing is changed and the script exits 2.
+IPs) the same check runs against OpenAlex via the ORCID iD, so the script works
+from any network, but then only lists candidates for review (a name match is not
+proof of authorship) and leaves the site data alone. If both fail, nothing is
+changed and the script exits 2.
 
 Usage: python3 scripts/sync_scholar.py [--dry-run]
 Writes `changed=true|false` to $GITHUB_OUTPUT when running in Actions.
@@ -19,6 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 LEGACY = ROOT / "src" / "data" / "legacy.json"
 SYNC = ROOT / "src" / "data" / "scholar-sync.json"
 SCHOLAR_ID = "wyrOw28AAAAJ"
+ORCID = "0000-0002-2535-7159"
 PAGE = 100
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 CONF = re.compile(r"conference|proceedings|symposium|workshop|\bconf\b|\bicc\b|\bieee .* (?:ic|sym)", re.I)
@@ -89,6 +93,26 @@ def is_new(title: str, known: list[str]) -> bool:
     return not any(n == k or n in k or difflib.SequenceMatcher(None, n, k).ratio() >= SIMILAR for k in known)
 
 
+def scrape_openalex():
+    """Fallback when Scholar blocks us: works OpenAlex ties to the ORCID iD, same row shape.
+
+    OpenAlex sometimes attributes other people's papers to an ORCID, so a work is
+    kept only if one of its authors is named "B... Mishra" and the year is plausible.
+    """
+    q = urllib.parse.urlencode({
+        "filter": f"author.orcid:https://orcid.org/{ORCID}", "per-page": 200,
+        "select": "title,publication_year,authorships", "mailto": "brijesh.mishra0933@gmail.com"})
+    works = rl.get("https://api.openalex.org/works?" + q)["results"]
+    rows = []
+    for w in works:
+        names = [a["author"]["display_name"] for a in w.get("authorships", [])]
+        mine = any(re.match(r"^b\w*\.?\s.*mishra$", n.strip(), re.I) for n in names)
+        if mine and w.get("title") and (w.get("publication_year") or 0) >= 2010:
+            rows.append({"title": w["title"], "authors": ", ".join(names), "venue": "",
+                         "year": w["publication_year"]})
+    return rows, None
+
+
 def kind(crossref_type: str | None, venue: str) -> str:
     if crossref_type == "proceedings-article" or CONF.search(venue):
         return "conference"
@@ -132,11 +156,19 @@ def main() -> int:
     known = [rl.norm(t) for t in texts]
 
     try:
+        if os.environ.get("SYNC_SOURCE") == "openalex":
+            raise Blocked("SYNC_SOURCE=openalex")
         rows, metrics = scrape()
     except Blocked as e:
-        print(f"Scholar not reachable: {e}. Nothing changed.", file=sys.stderr)
-        set_output(False)
-        return 2
+        print(f"Scholar not reachable ({e}); using OpenAlex via ORCID. Metrics unchanged.", file=sys.stderr)
+        try:
+            rows, metrics = scrape_openalex()
+            dry = True  # name matches are not proof of authorship (other Brijesh Mishras exist): review only
+            print("Candidates are listed for review only; add a paper yourself if it is yours.", file=sys.stderr)
+        except Exception as e2:
+            print(f"OpenAlex failed too: {e2}. Nothing changed.", file=sys.stderr)
+            set_output(False)
+            return 2
 
     new = [r for r in rows if is_new(r["title"], known)]
     added = []

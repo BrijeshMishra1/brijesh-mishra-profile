@@ -1,5 +1,5 @@
 # Note: Google Scholar blocks GitHub-hosted runners, so this usually exits quietly with no change.
-# The dependable path is scripts/sync_and_publish.sh on a normal network (scripts/install_schedule.sh).
+# The dependable path is scripts/sync_and_publish.py on a normal network (scripts/install_schedule.sh).
 name: Sync Google Scholar
 
 on:

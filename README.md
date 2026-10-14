@@ -47,7 +47,8 @@ To update publications, edit the legacy page (or `legacy.json`) and re-run the e
 (enriched from Crossref when a verified match exists) and refreshes the citation metrics in
 `src/data/scholar-sync.json`. `python3 scripts/sync_scholar.py --dry-run` shows what would change.
 
-`scripts/sync_and_publish.sh` does the whole job (sync, test, commit, push, publish). Run
+`python3 scripts/sync_and_publish.py` does the whole job (sync, test, commit, push, publish) on macOS,
+Linux or Windows from any clone; it needs only Python, git, Node.js and push access. Run
 `scripts/install_schedule.sh` once to run it every Monday 09:00 on this Mac via launchd.
 
 Google Scholar blocks GitHub-hosted runners, so `.github/workflows/sync-scholar.yml` normally finds
