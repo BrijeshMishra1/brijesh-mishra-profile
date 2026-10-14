@@ -43,13 +43,14 @@ To update publications, edit the legacy page (or `legacy.json`) and re-run the e
 
 ## Keeping publications current
 
-`scripts/sync_scholar.py` reads the Google Scholar profile, adds papers that are not on the site yet
-(enriched from Crossref when a verified match exists) and refreshes the citation metrics in
-`src/data/scholar-sync.json`. `python3 scripts/sync_scholar.py --dry-run` shows what would change.
+`scripts/sync_scholar.py` uses only the author's own official records: the Google Scholar profile and
+the ORCID public record. It reads just the newest papers (Scholar sorted by date), compares them to
+what the site has (exact title first, fuzzy only for the few that differ), and adds what is missing
+together with refreshed citation metrics in `src/data/scholar-sync.json`. DOI links come from ORCID;
+otherwise the paper's Scholar page is linked. If Scholar blocks the request, the ORCID works list
+is used instead (metrics are then left unchanged). `--dry-run` shows what would change.
 
 `python3 scripts/sync_and_publish.py` does the whole job (sync, test, commit, push, publish) on macOS,
-Linux or Windows from any clone; it needs only Python, git, Node.js and push access. Run
-`scripts/install_schedule.sh` once to run it every Monday 09:00 on this Mac via launchd.
-
-Google Scholar blocks GitHub-hosted runners, so `.github/workflows/sync-scholar.yml` normally finds
-nothing and exits cleanly; it is kept in case Scholar access changes.
+Linux or Windows from any clone; it needs only Python, git, Node.js and push access.
+`scripts/install_schedule.sh` runs it weekly on macOS. `scripts/resolve_links.py` is the one-off
+Crossref lookup used for the original publication list and is not part of the sync.
