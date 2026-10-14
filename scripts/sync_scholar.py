@@ -10,11 +10,12 @@ against a set of what the site already has, and fuzzy comparison only for the fe
 titles that are not an exact match. If the metrics and the newest papers are
 unchanged the script ends there.
 
-Usage: python3 scripts/sync_scholar.py [--dry-run]
+Usage: python3 scripts/sync_scholar.py [--dry-run] [--full]
+  --full  walk the whole profile once (to bring the site level with Scholar)
 Exit codes: 0 ok (changed or not), 2 neither source could be read.
 Writes `changed=true|false` to $GITHUB_OUTPUT when running in Actions.
 """
-import difflib, html, json, os, pathlib, re, sys, urllib.parse, urllib.request
+import difflib, html, json, os, pathlib, re, sys, time, urllib.parse, urllib.request
 from datetime import date
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -25,7 +26,6 @@ ORCID = "0000-0002-2535-7159"
 LATEST = 20  # newest papers examined per run
 SIMILAR = 0.78  # titles this alike are the same paper, spelled differently
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-JUNK = re.compile(r"^(committees?|preface|sn paper id)\b|\bproceedings of\b|\bselect proceedings\b", re.I)
 CONF = re.compile(r"conference|proceedings|symposium|workshop|\bconf\b", re.I)
 CHAPTER = re.compile(r"\bbook\b|chapter|lecture notes|handbook", re.I)
 ORCID_KIND = {"conference-paper": "conference", "book-chapter": "chapter", "book": "chapter"}
@@ -60,25 +60,38 @@ def kind(venue: str) -> str:
     return "chapter" if CHAPTER.search(venue) else "sci"
 
 
-def scholar_latest():
-    """Newest papers (Scholar `sortby=pubdate`) and the profile metrics, in one request."""
+def scholar_page(start: int, size: int, page: str | None = None):
     q = urllib.parse.urlencode({"user": SCHOLAR_ID, "hl": "en", "sortby": "pubdate",
-                                "cstart": 0, "pagesize": LATEST})
-    page = http("https://scholar.google.com/citations?" + q)
-    stats = [int(n) for n in re.findall(r'class="gsc_rsb_std">(\d+)<', page)]
+                                "cstart": start, "pagesize": size})
+    page = page or http("https://scholar.google.com/citations?" + q)
     rows = []
     for row in re.findall(r'<tr class="gsc_a_tr">(.*?)</tr>', page, re.S):
         title = re.search(r'<a href="([^"]*)" class="gsc_a_at"[^>]*>(.*?)</a>', row, re.S)
         grays = re.findall(r'<div class="gs_gray">(.*?)</div>', row, re.S)
         year = re.search(r'class="gsc_a_h gsc_a_hc gs_ibl">(\d{4})<', row)
         if title and year:
-            venue = clean(grays[1]) if len(grays) > 1 else ""
-            href = html.unescape(title.group(1))
-            rows.append({"title": clean(title.group(2)), "authors": clean(grays[0]) if grays else "",
-                         "venue": venue, "year": int(year.group(1)), "type": kind(venue),
-                         "link": "https://scholar.google.com" + href if href.startswith("/") else None})
+            venue, name = (clean(grays[1]) if len(grays) > 1 else ""), clean(title.group(2))
+            cite = re.search(r"citation_for_view=([^&\"]+)", html.unescape(title.group(1)))
+            link = (f"https://scholar.google.com/citations?view_op=view_citation&hl=en&user={SCHOLAR_ID}"
+                    f"&citation_for_view={cite.group(1)}") if cite else None
+            rows.append({"title": name, "authors": clean(grays[0]) if grays else "", "venue": venue,
+                         "year": int(year.group(1)), "type": kind(venue + " " + name), "link": link})
+    return rows, page
+
+
+def scholar_latest(full: bool = False):
+    """Papers (newest first) and the profile metrics. `full` walks every page of the profile."""
+    size = 100 if full else LATEST
+    rows, page = scholar_page(0, size)
+    stats = [int(n) for n in re.findall(r'class="gsc_rsb_std">(\d+)<', page)]
     if not rows or len(stats) < 6:
         raise Unreachable("no profile data in the response (captcha or block page)")
+    while full and len(rows) % size == 0:
+        more, _ = scholar_page(len(rows), size)
+        if not more:
+            break
+        rows += more
+        time.sleep(2)
     return rows, {"citations": stats[0], "hIndex": stats[2], "i10Index": stats[4]}
 
 
@@ -104,15 +117,21 @@ def orcid_works():
 
 
 def is_new(title: str, exact: set[str], known: list[str]) -> bool:
-    """False for front matter, exact matches, and near-identical titles of known papers."""
+    """False for an exact match or a near-identical title of a known paper.
+
+    Short titles are compared exactly only: a fuzzy match on a few words is a coincidence.
+    """
     n = norm(title)
-    if JUNK.search(title) or len(n) < 20 or n in exact:
+    if n in exact:
         return False
+    if len(n) < 20:
+        return True
     return not any(n in k or difflib.SequenceMatcher(None, n, k).ratio() >= SIMILAR for k in known)
 
 
 def main() -> int:
     dry = "--dry-run" in sys.argv
+    full = "--full" in sys.argv
     sync = json.loads(SYNC.read_text(encoding="utf-8"))
     legacy = json.loads(LEGACY.read_text(encoding="utf-8"))
     texts = [p["title"] for p in legacy["publications"] + sync["publications"]]
@@ -122,12 +141,12 @@ def main() -> int:
 
     metrics, source = None, "Google Scholar"
     try:
-        rows, metrics = scholar_latest()
+        rows, metrics = scholar_latest(full)
     except Unreachable as e:
         print(f"Google Scholar not reachable ({e}); reading the ORCID record instead.", file=sys.stderr)
         source = "ORCID"
         try:
-            rows = orcid_works()[:LATEST]
+            rows = orcid_works() if full else orcid_works()[:LATEST]
         except Unreachable as e2:
             print(f"ORCID not reachable either ({e2}). Nothing changed.", file=sys.stderr)
             set_output(False)

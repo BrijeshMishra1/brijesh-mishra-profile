@@ -8,6 +8,66 @@
  "publications": [
   {
    "type": "conference",
+   "year": 2024,
+   "authors": "AK Dwivedi, V Singh, A Shukla, NK Narayanaswamy, B Mishra",
+   "title": "Committees: International Conference on\" Ubiquitous Technology in Communication and Artificial Intelligence-2023",
+   "venue": "AIP Conference Proceedings 3131 (1), 010002, 2024",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wyrOw28AAAAJ&citation_for_view=wyrOw28AAAAJ:GnPB-g6toBAC"
+  },
+  {
+   "type": "conference",
+   "year": 2024,
+   "authors": "AK Dwivedi, V Singh, A Shukla, NK Narayanaswamy, B Mishra",
+   "title": "Preface: International Conference on\" Ubiquitous Technology in Communication and Artificial Intelligence-2023",
+   "venue": "AIP Conference Proceedings 3131 (1), 010001, 2024",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wyrOw28AAAAJ&citation_for_view=wyrOw28AAAAJ:JV2RwH3_ST0C"
+  },
+  {
+   "type": "sci",
+   "year": 2024,
+   "authors": "B Mishra, AK Singh, TY Satheesha, RK Verma, V Singh",
+   "title": "Jestr r",
+   "venue": "Journal of Engineering Science and Technology Review 17 (3), 179-200, 2024",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wyrOw28AAAAJ&citation_for_view=wyrOw28AAAAJ:r0BpntZqJG4C"
+  },
+  {
+   "type": "conference",
+   "year": 2023,
+   "authors": "B Mishra, RK Singh, S Wairya, M Tiwari",
+   "title": "Intelligent Systems and Smart Infrastructure: Proceedings of ICISSI 2022",
+   "venue": "CRC Press, 2023",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wyrOw28AAAAJ&citation_for_view=wyrOw28AAAAJ:-f6ydRqryjwC"
+  },
+  {
+   "type": "conference",
+   "year": 2022,
+   "authors": "B Mishra, M Tiwari",
+   "title": "VLSI, Microwave and Wireless Technologies: Select Proceedings of ICVMWT 2021",
+   "venue": "Springer Nature, 2022",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wyrOw28AAAAJ&citation_for_view=wyrOw28AAAAJ:hC7cP41nSMkC"
+  },
+  {
+   "type": "conference",
+   "year": 2020,
+   "authors": "B Singh, SN Prabhakar Tiwari, RP Singh, M Vishwakarma, DK Patel, ...",
+   "title": "SN Paper ID",
+   "venue": "InInternational Conference on Electrical and Electronics Engineering (ICE3 …, 2020",
+   "impact": null,
+   "corresponding": false,
+   "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wyrOw28AAAAJ&citation_for_view=wyrOw28AAAAJ:TQgYirikUcIC"
+  },
+  {
+   "type": "conference",
    "year": 2022,
    "authors": "RK Verma, A Kumar",
    "title": "A compact slot and notch loaded microstrip antenna for wireless applications",
